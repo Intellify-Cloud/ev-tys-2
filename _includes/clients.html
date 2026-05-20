@@ -3,7 +3,7 @@
     
     <!-- Top Heading -->
     <div class="mb-10 sm:mb-12 md:mb-[3.5rem]">
-      <h2 class="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[42px] font-extrabold leading-[1]" style="font-family: Poppins, sans-serif; font-weight: 800; color: #5f203e;">
+      <h2 class="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[42px] font-extrabold leading-[1]" style="font-family: Poppins, sans-serif; font-weight: 800; color: #5E203F;">
         {{ site.data.sitetext.clients.title | default: "We work with all the leading banks" }}
       </h2>
     </div>
@@ -15,7 +15,7 @@
         {% if client.logo %}
           <img src="{{ site.baseurl }}/{{ client.logo }}" alt="{{ client.title }}" class="max-h-[5rem] max-w-full object-contain sepia-[100%] opacity-90">
         {% else %}
-          <span class="text-[#5f203e] font-semibold text-sm">{{ client.title }}</span>
+          <span class="text-[#5E203F] font-semibold text-sm">{{ client.title }}</span>
         {% endif %}
       </a>
       {% endfor %}
