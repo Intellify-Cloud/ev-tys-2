@@ -1,0 +1,29 @@
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-2 left-0 right-0 z-50 mx-auto px-6 max-w-[1200px] py-2" data-purpose="site-navigation">
+  <div class="bg-[#c8e6d8]/90 backdrop-blur-sm rounded-[16px] px-8 py-3 flex justify-between items-center" style="box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);">
+    <!-- Logo -->
+    <a href="{{ site.baseurl }}/" class="flex items-center">
+      <img src="{{ site.baseurl }}/assets/img/logo/mzansi-bonds-logo.png" alt="Mzansi Bonds" class="h-12 w-auto">
+    </a>
+
+    <!-- Nav links -->
+    <nav class="hidden md:flex items-center space-x-8 text-xl font-bold text-mzansi-text tracking-wide">
+      {% for item in site.data.navigation.nav %}
+        {% if item.url %}
+          <a class="hover:text-mzansi-orange transition-colors{% if item.title == 'Contact' %} bg-mzansi-orange text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-opacity{% endif %}" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | downcase }}</a>
+        {% elsif item.section %}
+          <a class="hover:text-mzansi-orange transition-colors" href="{{ site.baseurl }}/#{{ item.section }}">{{ item.title | downcase }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-mzansi-text" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div>
+</header>
+<!-- END: MainHeader -->

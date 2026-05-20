@@ -1,0 +1,37 @@
+title: Mzansi Bonds | Own Your Dream
+email: hello@mzansibonds.co.za
+description: Mzansi Bonds empowers the people of South Africa to take ownership of their future through property. We simplify the bond process and secure the best deals from the banks.
+author: Mzansi Bonds
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+logo:
+  path: /favicon.png
+  alt: Mzansi Bonds Logo
+
+exclude: [node_modules, webpack-config.js, package.json, package-lock.json, design]
+
+group: Mzansi Bonds
+
+company: Mzansi Bonds (Pty) LTD.
+
+contact:
+  phone: "082 059 0846"
+  email: hello@mzansibonds.co.za
+  whatsapp: 27820590846
+  whatsapp_message: Hi, I would like to chat about a home loan.
+
+url: https://www.mzansibonds.co.za
+
+address: Durban
+
+broadsheetApiUrl: https://ca-broadsheet-webapi.mangodesert-1e0c2940.westeurope.azurecontainerapps.io

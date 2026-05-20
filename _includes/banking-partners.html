@@ -1,0 +1,92 @@
+<!-- BEGIN: BankingPartnersSection -->
+<section
+  id="{{ site.data.sitetext.banking_partners.section | default: 'banking-partners' }}"
+  class="banking-partners"
+  data-purpose="banking-partners"
+  {% if site.data.sitetext.banking_partners.background_image %}
+  style="background-image: url('{{ site.baseurl }}{{ site.data.sitetext.banking_partners.background_image }}');"
+  {% endif %}>
+  <div class="banking-partners__overlay"></div>
+
+  <div class="banking-partners__container">
+    <h2 class="banking-partners__title">
+      {{ site.data.sitetext.banking_partners.title }}
+    </h2>
+
+    <div class="banking-partners__carousel-wrapper">
+      <button
+        class="banking-partners__nav-arrow banking-partners__nav-arrow--prev"
+        type="button"
+        aria-label="Previous partners">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="banking-partners__carousel" tabindex="0">
+        {% for partner in site.data.sitetext.banking_partners.list %}
+        <div class="banking-partners__logo-item">
+          <a
+            href="{{ partner.url | default: '#' }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="banking-partners__logo-link"
+            title="{{ partner.title }}">
+            {% if partner.logo %}
+              <img
+                src="{{ site.baseurl }}/{{ partner.logo }}"
+                alt="{{ partner.title }}"
+                class="banking-partners__logo-image">
+            {% else %}
+              <span class="banking-partners__logo-text">{{ partner.title }}</span>
+            {% endif %}
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <button
+        class="banking-partners__nav-arrow banking-partners__nav-arrow--next"
+        type="button"
+        aria-label="Next partners">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.banking-partners').forEach(function (section) {
+      const carousel = section.querySelector('.banking-partners__carousel');
+      const prevBtn = section.querySelector('.banking-partners__nav-arrow--prev');
+      const nextBtn = section.querySelector('.banking-partners__nav-arrow--next');
+      const scrollAmount = 280;
+
+      if (!carousel) return;
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+      }
+
+      carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') {
+          carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else if (e.key === 'ArrowRight') {
+          carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>
+<!-- END: BankingPartnersSection -->

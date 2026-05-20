@@ -1,0 +1,21 @@
+<!-- BEGIN: ExpertGuidance -->
+<section id="advice" class="max-w-[1200px] mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-40 items-center">
+  <div>
+    <h2 class="text-5xl font-extrabold text-mzansi-orange leading-tight mb-8">{{ site.data.sitetext.expert.title }}</h2>
+    <p class="text-mzansi-text max-w-[400px] mb-12 font-normal" style="font-family: Poppins, sans-serif; font-size: 18px; line-height: 28px;">{{ site.data.sitetext.expert.body }}</p>
+  </div>
+  <div class="relative">
+    <div class="w-full aspect-square rounded-full overflow-hidden border-[16px] border-white shadow-xl">
+      <img alt="{{ site.data.sitetext.expert.image_alt }}" class="w-full h-full object-cover"
+        src="{{ site.baseurl }}/assets/img/sections/image-right.jpg" />
+    </div>
+    <!-- WhatsApp Floating Circle -->
+    <div class="absolute bottom-10 -left-[95px]">
+      <a href="https://api.whatsapp.com/send?phone={{ site.contact.whatsapp }}&text={{ site.contact.whatsapp_message }}"
+        class="bg-mzansi-orange text-white w-[230px] h-[230px] rounded-full flex flex-col items-center justify-center text-center p-6 text-xl font-bold leading-tight step-circle cursor-pointer">
+        <span>{{ site.data.sitetext.expert.cta_text }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- END: ExpertGuidance -->

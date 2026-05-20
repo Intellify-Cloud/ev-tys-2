@@ -1,0 +1,340 @@
+// ── Contact Section Redesign ─────────────────────────────
+// Tailwind-style tokens baked into custom SCSS
+// max-w-7xl = 80rem = 1280px
+
+// ── Section Container ──
+// Break out of Bootstrap .container to allow max-w-7xl (1280px)
+.contact-section {
+  padding: 8rem 0 5rem; // pt-32 pb-20
+  background: $gray-100;
+  // Negate Bootstrap container padding
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.contact-container {
+  max-width: 80rem; // max-w-7xl = 1280px
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem; // px-8
+  padding-right: 2rem;
+}
+
+// ── Hero ──
+.contact-hero {
+  max-width: 48rem; // max-w-3xl
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 5rem; // mb-20
+}
+
+.contact-hero-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: $card-bg;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+  }
+}
+
+.contact-hero-subtext {
+  font-size: 1.125rem; // text-lg
+  line-height: 1.625; // leading-relaxed
+  color: $gray-700;
+}
+
+// ── Main Grid ──
+// 12-col grid on lg+ · gap-12 · Left 5 · Right 7
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem; // gap-12
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: start; // items-start
+  }
+}
+
+.contact-left {
+  @media (min-width: 1024px) {
+    grid-column: span 5;
+  }
+}
+
+.contact-right {
+  @media (min-width: 1024px) {
+    grid-column: span 7;
+  }
+}
+
+// ── Shared card tokens ──
+$card-bg:      #4D1B36;   // mzansi-purple
+$card-accent:  #F15A24;   // mzansi-orange
+$card-radius:  1.25rem;   // rounded-[20px]
+
+// ── Office Hours Card ──
+.office-hours-card {
+  background: $card-bg;
+  border-radius: $card-radius;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.office-hours-decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  font-size: 6rem;
+  opacity: 0.12;
+  color: $card-accent;
+  pointer-events: none;
+}
+
+.office-hours-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: $white;
+  @include heading-font;
+}
+
+.office-hours-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.office-hours-icon {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: rgba($card-accent, 0.18);
+  color: $card-accent;
+  font-size: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.office-hours-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  color: $card-accent;
+  @include heading-font;
+}
+
+.office-hours-value {
+  display: block;
+  font-size: 1.125rem;
+  color: $white;
+}
+
+// ── Quick Contact Actions ──
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.quick-action-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  border-radius: $card-radius;
+  border: none;
+  background: $card-bg;
+  text-decoration: none;
+  color: $white;
+  transition: transform 0.15s, background 0.2s;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: lighten($card-bg, 8%);
+    text-decoration: none;
+    color: $white;
+  }
+
+  i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $card-accent;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    @include heading-font;
+  }
+}
+
+// ── Contact Form Card ──
+.contact-form-card {
+  background: $card-bg;
+  border-radius: $card-radius;
+  padding: 2.5rem;
+}
+
+.contact-form {
+  position: relative;
+}
+
+// Form field spacing: space-y-6
+.form-field {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: $card-accent;
+    @include heading-font;
+  }
+}
+
+// 2-col row for name / email+phone
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr; // grid-cols-2
+    gap: 1.5rem; // gap-6
+  }
+}
+
+// Input / Textarea shared
+.form-input {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: rgba($white, 0.12);
+  font-size: 0.95rem;
+  @include body-font;
+  color: $white;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 0.2s;
+
+  &::placeholder {
+    color: rgba($white, 0.45);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $card-accent;
+  }
+
+  &.error {
+    box-shadow: 0 0 0 2px #e53935;
+  }
+}
+
+.form-textarea {
+  resize: none; // resize-none
+}
+
+.req {
+  color: $card-accent;
+}
+
+.error-message {
+  display: block;
+  color: #e53935;
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+  min-height: 1.1rem;
+}
+
+.status-message {
+  padding: 12px 16px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  @include body-font;
+
+  &.success {
+    background: #e0f4fb;
+    color: #006f99;
+    border: 1px solid #99d4ee;
+  }
+
+  &.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+  }
+}
+
+// Submit button
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $card-accent;
+  color: $white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  @include heading-font;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+
+  &:hover:not(:disabled) {
+    background: darken($card-accent, 10%);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background: lighten($card-accent, 20%);
+    cursor: not-allowed;
+  }
+}
+
+// Privacy note
+.privacy-note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: rgba($white, 0.5);
+}

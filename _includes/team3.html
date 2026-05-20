@@ -1,0 +1,66 @@
+<!-- Team v3 (3-Member Grid) -->
+<section class="page-section bg-light" id="{{ site.data.sitetext.team.section | default: 'team' }}">
+  <div class="container">
+
+    <!-- Centered Title -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{{ site.data.sitetext.team.title }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.team.text }}</h3>
+      </div>
+    </div>
+
+    <!-- 3-Column Team Grid -->
+    <div class="row mt-5">
+      {% for person in site.data.sitetext.team.people %}
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="team-card-v">
+          <div class="team-card-image">
+            <img src="{{ person.image }}" alt="{{ person.name }}" loading="lazy" />
+          </div>
+          <div class="team-card-info">
+            <h3 class="team-card-name">{{ person.name }}</h3>
+            <p class="team-card-role">{{ person.role }}</p>
+            <p class="team-card-bio">{{ person.bio }}</p>
+            <div class="team-card-links">
+              {% for network in person.social %}
+              {% assign label_prefix = "Connect with" %}
+              {% if network.icon contains 'phone' %}{% assign label_prefix = "Call" %}{% endif %}
+              {% if network.icon contains 'envelope' %}{% assign label_prefix = "Email" %}{% endif %}
+              {% if network.icon contains 'whatsapp' %}{% assign label_prefix = "WhatsApp" %}{% endif %}
+              
+              <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ label_prefix }} {{ person.name }}">
+                <i class="{{ network.icon }}"></i>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Office Hours (Subtle Footer) -->
+    <div class="row mt-4">
+      <div class="col-lg-8 mx-auto">
+        <div class="team-hours-footer">
+          <div class="team-hours-inline">
+            <i class="far fa-clock mr-2" aria-hidden="true"></i>
+            <strong>{{ site.data.sitetext.team.office_hours.title }}:</strong>
+            {% for line in site.data.sitetext.team.office_hours.lines %}
+            <span>{{ line }}{% unless forloop.last %} | {% endunless %}</span>
+            {% endfor %}
+          </div>
+          {% if site.data.sitetext.team.office_hours.urgent_note %}
+          <div class="team-hours-urgent mt-2">
+            <i class="fas fa-exclamation-circle text-primary" aria-hidden="true"></i>
+            <span class="text-muted small"><em>{{ site.data.sitetext.team.office_hours.urgent_note }}</em></span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Team -->

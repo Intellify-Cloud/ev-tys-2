@@ -1,0 +1,56 @@
+<!-- BEGIN: AsEasyAsSection -->
+<section
+  id="{{ site.data.sitetext.as_easy_as.section | default: 'as-easy-as' }}"
+  class="as-easy-as"
+  data-purpose="as-easy-as">
+  <div class="as-easy-as__container">
+    <h2 class="as-easy-as__title">
+      {{ site.data.sitetext.as_easy_as.title }}
+    </h2>
+
+    <div class="as-easy-as__steps">
+      <article class="as-easy-as__step">
+        <div class="as-easy-as__icon-wrapper" aria-hidden="true">
+          <i class="as-easy-as__icon {{ site.data.sitetext.as_easy_as.step_1_icon }}"></i>
+        </div>
+        <h3 class="as-easy-as__step-title">
+          {{ site.data.sitetext.as_easy_as.step_1_title }}
+        </h3>
+        <p class="as-easy-as__step-description">
+          {{ site.data.sitetext.as_easy_as.step_1_description }}
+        </p>
+      </article>
+
+      <article class="as-easy-as__step">
+        <div class="as-easy-as__icon-wrapper" aria-hidden="true">
+          <i class="as-easy-as__icon {{ site.data.sitetext.as_easy_as.step_2_icon }}"></i>
+        </div>
+        <h3 class="as-easy-as__step-title">
+          {{ site.data.sitetext.as_easy_as.step_2_title }}
+        </h3>
+        <p class="as-easy-as__step-description">
+          {{ site.data.sitetext.as_easy_as.step_2_description }}
+        </p>
+      </article>
+
+      <article class="as-easy-as__step">
+        <div class="as-easy-as__icon-wrapper" aria-hidden="true">
+          <i class="as-easy-as__icon {{ site.data.sitetext.as_easy_as.step_3_icon }}"></i>
+        </div>
+        <h3 class="as-easy-as__step-title">
+          {{ site.data.sitetext.as_easy_as.step_3_title }}
+        </h3>
+        <p class="as-easy-as__step-description">
+          {{ site.data.sitetext.as_easy_as.step_3_description }}
+        </p>
+      </article>
+    </div>
+
+    <a
+      class="as-easy-as__button"
+      href="{{ site.baseurl }}{{ site.data.sitetext.as_easy_as.button_link }}">
+      {{ site.data.sitetext.as_easy_as.button_text }}
+    </a>
+  </div>
+</section>
+<!-- END: AsEasyAsSection -->

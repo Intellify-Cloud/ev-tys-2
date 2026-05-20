@@ -1,0 +1,61 @@
+<footer class="bg-mzansi-teal/40 py-16">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+      <!-- Footer Logo and Social -->
+      <div class="space-y-6">
+        <img class="h-16 w-auto" src="{{ site.baseurl }}/assets/img/logo/mzansi-bonds-logo.png" alt="Mzansi Bonds Logo">
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/mzansibonds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-full text-mzansi-orange text-2xl"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mzansibonds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-md text-mzansi-orange text-2xl"><i
+              class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/mzansibonds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-full text-mzansi-orange text-2xl"><i
+              class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <!-- Central Decorative Circle -->
+      <div class="hidden lg:flex justify-center">
+        <div
+          class="bg-mzansi-orange text-white w-[140px] h-[140px] rounded-full flex flex-col items-center justify-center text-center p-4 font-bold text-xl leading-tight shadow-lg">
+          <span>Own your dream.</span>
+        </div>
+      </div>
+      <!-- Contact and Links -->
+      <div class="text-center lg:text-right space-y-6">
+        <div class="inline-flex gap-4 justify-center lg:justify-end font-extrabold text-base uppercase">
+          <a href="{{ site.baseurl }}/bond-calculator" class="text-mzansi-orange hover:opacity-80 transition-opacity">calculators</a>
+          <a href="{{ site.baseurl }}/documents" class="text-mzansi-orange hover:opacity-80 transition-opacity">documents</a>
+          <a href="{{ site.baseurl }}/#get-started" class="text-mzansi-orange hover:opacity-80 transition-opacity">get started</a>
+        </div>
+        <div class="flex space-x-4 justify-center lg:justify-end">
+          <a href="tel:{{ site.contact.phone }}" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-full text-mzansi-orange text-2xl hover:bg-mzansi-orange hover:text-white transition-colors">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://wa.me/27820590846" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-md text-mzansi-orange text-2xl hover:bg-mzansi-orange hover:text-white transition-colors">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:{{ site.contact.email }}" class="flex items-center justify-center w-10 h-10 border-2 border-mzansi-orange rounded-full text-mzansi-orange text-2xl hover:bg-mzansi-orange hover:text-white transition-colors">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Centered Copyright & Legal -->
+    <div class="flex flex-col items-center justify-center text-[10px] text-mzansi-purple uppercase font-semibold text-center mt-16 md:mt-12">
+      <span>COPYRIGHT © {{ 'now' | date: "%Y" }} {{ site.company }}</span>
+      <div class="flex gap-2 mt-2">
+        <a href="{{ site.baseurl }}/privacy-statement" class="hover:text-mzansi-orange transition-colors">PRIVACY POLICY</a>
+        <span>/</span>
+        <a href="{{ site.baseurl }}/legal" class="hover:text-mzansi-orange transition-colors">T&Cs</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sub-Footer / Signature Section -->
+<div class="h-[50px] flex items-center justify-center text-center bg-[#FDF9EB]">
+  <span class="text-[10px] text-mzansi-purple uppercase font-semibold tracking-wider">
+    {{ site.data.sitetext.footer.design_credit }}
+  </span>
+</div>
+<!-- END: MainFooter -->

@@ -1,0 +1,349 @@
+header:
+  title: "mzansi bonds Finance"
+  text: "We take the stress out of the process. Your application goes to multiple banks simultaneously — including your own — so they compete for your business and you walk away with the best rate on the table. Real savings, real peace of mind. And because we're paid by the banks on registration, our service is completely free to you."
+  highlights:
+    - title: "Bond Origination"
+      icon: "fas fa-home"
+    - title: "Debt Removal"
+      icon: "fas fa-shield-alt"
+    - title: "Vehicle Finance"
+      icon: "fas fa-car"
+
+hero:
+  eyebrow: "Secure the best bond deals."
+  headline: "Own your dream."
+  body1: "Take ownership of your future through property."
+  body2: "We simplify the bond process and secure the best deals from the banks."
+  button: "Get Started"
+
+intro:
+  title: "Secure the best<br />bond deals."
+  body: "Mzansi bonds empowers the people of South Africa to take ownership of their future through property. As a champion for everyday South Africans, we simplify the bond process, unlock the best deals from the banks, and guide people on the journey to home ownership."
+
+expert:
+  title: "Expert<br />guidance from<br />start to finish."
+  body: "We guide you through every step of the bond process so you can move forward with confidence."
+  cta_text: "WhatsApp us for expert advice."
+  image_alt: "Expert consultation"
+
+2-col-image_left_text_right:
+  title: "Access to the<br />best deals from<br />the banks."
+  body: "We work with South Africa's leading banks to secure the most competitive home loan offers."
+  cta_text: "Get<br />started."
+  image_alt: "Man on sofa"
+
+nocharge:
+  title: "No Charge for our Service"
+  text: "We earn a once-off fee from the banks for each registered home loan. Our service is at zero cost to you."
+  button 1 text: ""
+  button 2 text: ""
+
+services:
+  title: "Services We Offer"
+  text: "We get you the best deal on your Home Loan by sourcing quotes from all the leading banks (including your own bank) for you to compare."
+  section: services
+  list:
+    - title: "Pre-qualification"
+      desc: "Contact us before you start looking at properties. With our streamlined pre-approval process, we will give you advice around your qualifying and affordability range, as well as on improving your credit and affordability profiles."
+      icon: fas fa-tasks
+      link:
+        url: /contact
+        text: "Contact Bond Studio"
+    - title: "Bond Origination"
+      desc: "We work hard on negotiating the best possible terms and interest rates for all our clients. Complete our easy Home Loan application form, and we will ensure that all your documentation is correct to be submitted to all the banks. We liaise with all the major banks (including your own bank) to guarantee you the best interest rates and deal on your Home Loan. "
+      icon: fas fas fa-home
+      link:
+        url: /contact
+        text: "mzansi bonds Finance"
+    - title: "Insurance"
+      desc: "We offer competitive insurance products including Building Insurance and Mortgage Protection, bringing all your home loan options under one roof."
+      icon: fas fa-shield-alt
+      link:
+        url: /contact
+        text: "mzansi bonds Finance"
+
+articles:
+  title: "Articles"
+  text: ""
+  section: articles
+
+calculators:
+  title: "Home Loan Calculators"
+  text: "Use our Home loan Calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be."
+  section: calculators
+  list:
+    - title: "Bond Calculator"
+      desc: "Calculate the home loan you qualify for."
+      icon: fas fa-calculator
+      link:
+        url: /affordability-calculator
+        text: "Calculate"
+    - title: "Repayment Calculator"
+      desc: "Calculate your monthly bond repayments."
+      icon: fas fa-calculator
+      link:
+        url: /bond-calculator
+        text: "Calculate"
+    - title: "Transfer Cost Calculator"
+      desc: "Calculate your registration and transfer costs."
+      icon: fas fa-calculator
+      link:
+        url: /transfer-cost-calculator
+        text: "Calculate"
+
+more-calculators:
+  title: "More Calculators"
+  text: ""
+  section: more-calculators
+  list:
+    - title: "Amortisation Calculator"
+      desc: "Calculate how your repayment is structured."
+      icon: fas fa-calculator
+      link:
+        url: /amortisation-calculator
+        text: "Calculate"
+
+    - title: "Deposit Savings Calculator"
+      desc: "Calculate how much you need to save for your deposit."
+      icon: fas fa-calculator
+      link:
+        url: /deposit-savings-calculator
+        text: "Calculate"
+    - title: "Additional Payment Calculator"
+      desc: "Calculate your savings on your total home loan cost by paying a little extra into your bond."
+      icon: fas fa-calculator
+      link:
+        url: /additional-payment-calculator
+        text: "Calculate"
+
+textblock:
+  title: "The Process"
+  text: ""
+  footer: ""
+  section: textblock
+  list:
+  - title: "<strong>Plan</strong> – Get Pre-Approved. We take the time to answer your questions and explain every step of the journey."
+    image: "fas fa-circle"
+  - title: "<strong>Decide</strong> – Find your dream home and sign an Offer to Purchase."
+    image: "fas fa-circle"
+  - title: "<strong>Prepare</strong> – We gather the final required supporting documentation from you to ensure a bulletproof application."    
+    image: "fas fa-circle"
+  - title: "<strong>Apply</strong> – We handle the heavy lifting, applying to all major banks (including your own) at once."    
+    image: "fas fa-circle"
+  - title: "<strong ng>We negotiate</strong> – We fight to secure the most competitive interest rates and terms from each of the banks."    
+    image: "fas fa-circle"
+  - title: "<strong>You choose</strong> – Review the offers and select the home-loan package that fits your life best."
+    image: "fas fa-circle"
+
+portfolio:
+  title: "Other Services"
+  text: "Some of our work"
+  section: portfolio
+  closebutton: "Close"
+
+about:
+  title: "About Us"
+  text2:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <br><br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <br><br>
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <br><br>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  text3: ""
+
+clients:
+  title: We work with all the leading banks
+  title2: Experienced, Knowledgeable & Dedicated to Customer Service
+  text:
+  section: clients
+  max-height: 120px
+  horizontal-scrolling: "" #"yes/no"
+  list:
+    - title: "ABSA"
+      url: "https://www.absa.co.za"
+      logo: "assets/img/clients/absa-bw.png"
+
+    - title: "FNB"
+      url: "https://www.fnb.co.za"
+      logo: "assets/img/clients/fnb-n.png"
+
+    - title: "Nedbank"
+      url: "https://www.nedbank.co.za"
+      logo: "assets/img/clients/nedbank-bw.png"
+
+    - title: "Standard Bank"
+      url: "https://www.standardbank.co.za"
+      logo: "assets/img/clients/SBSA-bw.png"
+
+    - title: "RMB"
+      url: "https://www.rmb.co.za"
+      logo: "assets/img/clients/rmb-img-n.png"
+
+    - title: "Investec"
+      url: "https://www.investec.co.za"
+      logo: "assets/img/clients/investec.png"
+
+    - title: "Housing Investment Partners"
+      url: "https://www.hiphousing.co.za"
+      logo: "assets/img/clients/hip.jpg"
+
+    - title: "Sentinel Homes"
+      url: "https://www.sentinelhomes.co.za"
+      logo: "assets/img/clients/sentinal-homes.png"
+
+banking_partners:
+  section: banking-partners
+  title: "Our trusted banking partners"
+  background_image: ""
+  list:
+    - title: "ABSA"
+      logo: "assets/img/clients/absa-bw.png"
+      url: "https://www.absa.co.za"
+    - title: "FNB"
+      logo: "assets/img/clients/fnb-n.png"
+      url: "https://www.fnb.co.za"
+    - title: "Nedbank"
+      logo: "assets/img/clients/nedbank-bw.png"
+      url: "https://www.nedbank.co.za"
+    - title: "Standard Bank"
+      logo: "assets/img/clients/SBSA-bw.png"
+      url: "https://www.standardbank.co.za"
+    - title: "RMB"
+      logo: "assets/img/clients/rmb-img-n.png"
+      url: "https://www.rmb.co.za"
+    - title: "Investec"
+      logo: "assets/img/clients/investec.png"
+      url: "https://www.investec.co.za"
+
+take_the_nextstep:
+  section: take-the-nextstep
+  heading_main: "Every step takes you somewhere."
+  heading_accent: "Let your next take you home."
+  description: "Your next step might be moving in together, it might be moving to another city. It might be finding somewhere bigger for your growing family. Or it might be finding somewhere better suited to your stage of life. Whatever your next step is - it's the freedom to live life fully now."
+  button_text: "Take your next step. Get pre-qualified now."
+  button_link: "/pre-qualify"
+
+as_easy_as:
+  section: as-easy-as
+  title: "As easy as..."
+  step_1_title: "Step 1"
+  step_1_description: "Let us pre-qualify you."
+  step_1_icon: "fas fa-clipboard-check"
+  step_2_title: "Step 2"
+  step_2_description: "You find your dream home"
+  step_2_icon: "fas fa-home"
+  step_3_title: "Step 3"
+  step_3_description: "We make it happen!"
+  step_3_icon: "fas fa-key"
+  button_text: "Apply now"
+  button_link: "/apply"
+
+lets_make_it_happen:
+  section: lets-make-it-happen
+  title: "Let's make it happen."
+  description: "We guide you through every step of the bond process so you can move forward with confidence."
+  button_text: "WhatsApp us for expert advice"
+  button_link: "https://wa.me/27820590846"
+  image: "/assets/img/sections/keys.jpg"
+  image_alt: "House keys"
+  background_image: ""
+
+experienced:
+  title: We Get Bonds Approved
+  text: With 10+ years of experience. If you are salaried or self-employed — we've seen it all, and we know how to get you approved.
+
+team:
+  title: "The Team"
+  text: We would love to hear from you and assist you in your home buying journey.
+  # subtext: Text Below the Images, also Markdown is suppoted **Bold Text Allowed**
+  section: team
+  contact:
+  office_hours:
+    title: "Office Hours"
+    lines:
+      - "Mon to Fri : 9 AM to 5 PM"
+      - "Sat: 9 AM to 1PM"
+      - "Sun & Public Holidays: Closed"
+    urgent_note: "Need urgent assistance after hours? Contact our team directly for support."
+
+  people:
+    - name: "Marcus<br>Aurelius"
+      role: "Director"
+      image: 
+      bio: "Dedicated to providing personalized financial solutions and guiding clients through every step of the bond application process."
+      social:
+        - url: tel:+27000000000
+          icon: fas fa-phone
+        - url: mailto:team@example.com?subject=mzansi bonds Finance Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27000000000
+          icon: fab fa-whatsapp
+    - name: "Epictetus<br>of Hierapolis"
+      role: "Bond Consultant"
+      image: 
+      bio: "Specializing in home loan origination and helping clients secure the best rates across all major banks."
+      social:
+        - url: tel:+27000000000
+          icon: fas fa-phone
+        - url: mailto:team@example.com?subject=mzansi bonds Finance Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27000000000
+          icon: fab fa-whatsapp
+    - name: "Seneca<br>the Younger"
+      role: "Finance Consultant"
+      image: 
+      bio: "With expert knowledge in real estate finance, Thabo ensures that every client receives the best possible deal on their home loan."
+      social:
+        - url: tel:+27000000000
+          icon: fas fa-phone
+        - url: mailto:team@example.com?subject=mzansi bonds Finance Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27000000000
+          icon: fab fa-whatsapp
+    - name: "Zeno<br>of Citium"
+      role: "Bond Consultant"
+      image: 
+      bio: "With a focus on exceptional service, Kaylene helps clients navigate the complexities of home finance to secure the best possible bond solutions."
+      social:
+        - url: tel:+27000000000
+          icon: fas fa-phone
+        - url: mailto:team@example.com?subject=mzansi bonds Finance Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27000000000
+          icon: fab fa-whatsapp
+
+testimonials:
+  title: "TESTIMONIALS"
+  text: ""
+  section: testimonials
+  people:
+    - name: ""
+      testimony: ""
+
+    - name: ""
+      testimony: ""
+
+contact:
+  title: "Get in Touch"
+  text: "We're here to help. First-time buyer or refinancing? We'll guide you through every step."
+  section: contact
+  office_hours:
+    title: "Office Hours"
+    lines:
+      - "OPEN : 9 AM - 5 PM, MON to FRI"
+      - "CLOSED : Sat, Sun & Public Holidays"
+
+footer:
+  legal: "Powered by evo Home Loans"
+  design_credit: 'Website by <a href="https://www.intellify.co.za/" target="_blank" rel="noopener noreferrer" class="font-bold hover:text-mzansi-orange">Intellify</a>'
+  social:
+    - url: https://www.instagram.com/firstclassfinancesa
+      icon: "fab fa-instagram"
+    - url: https://www.tiktok.com/@firstclassfinancesa
+      icon: "fab fa-tiktok"
+
+engagement:
+  heading: "Empowering South Africans through property ownership."
+  copy: "We believe everyone deserves the opportunity to own their dream home."
