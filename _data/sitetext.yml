@@ -196,7 +196,7 @@ clients:
 banking_partners:
   section: banking-partners
   title: "Our trusted banking partners"
-  background_image: ""
+  background_image: "/assets/img/sections/clients-bg.jpg"
   list:
     - title: "ABSA"
       logo: "assets/img/clients/absa-bw.png"
@@ -336,6 +336,53 @@ contact:
       - "CLOSED : Sat, Sun & Public Holidays"
 
 footer:
+  company_name: "Mzansi Bonds"
+  logo: "/assets/img/logo/mzansi-bonds-logo.png"
+  tagline_icon: ""
+  tagline: "Own your dream."
+  copyright: "COPYRIGHT © 2026 Mzansi Bonds (Pty) LTD."
+  quicklinks_title: "Quicklinks"
+  quicklinks:
+    - title: "Home"
+      url: "/"
+    - title: "Get started"
+      url: "/#get-started"
+    - title: "About us"
+      url: "/about"
+    - title: "Contact"
+      url: "/contact"
+  resources_title: "Resources"
+  resources:
+    - title: "Bond Calculator"
+      url: "/bond-calculator"
+    - title: "Affordability Calculator"
+      url: "/affordability-calculator"
+    - title: "Transfer Cost Calculator"
+      url: "/transfer-cost-calculator"
+  contact_title: "Get in touch"
+  contact_info:
+    - type: "email"
+      value: "hello@mzansibonds.co.za"
+    - type: "whatsapp"
+      value: "27820590846"
+      display: "WhatsApp Us"
+    - type: "hours"
+      value: "Open Mon-Fri, 9am to 5pm. Closed Sat, Sun, & public holidays."
+  social_links:
+    - title: "Instagram"
+      icon: "instagram"
+      url: "https://www.instagram.com/mzansibonds"
+    - title: "Facebook"
+      icon: "facebook"
+      url: "https://www.facebook.com/mzansibonds"
+    - title: "LinkedIn"
+      icon: "linkedin"
+      url: "https://www.linkedin.com/company/mzansibonds"
+  policy_links:
+    - title: "Privacy Policy"
+      url: "/privacy-statement"
+    - title: "T&C's"
+      url: "/legal"
   legal: "Powered by evo Home Loans"
   design_credit: 'Website by <a href="https://www.intellify.co.za/" target="_blank" rel="noopener noreferrer" class="font-bold hover:text-mzansi-orange">Intellify</a>'
   social:
