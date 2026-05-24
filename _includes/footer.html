@@ -68,13 +68,11 @@
 
       <div class="footer__column footer__column--tagline">
         <div class="footer__tagline-wrapper">
-          {% if site.data.sitetext.footer.tagline_icon %}
           <img
-            src="{{ site.baseurl }}{{ site.data.sitetext.footer.tagline_icon }}"
-            alt="Own your dream icon"
-            class="footer__tagline-icon">
-          {% endif %}
-          <p class="footer__tagline">{{ site.data.sitetext.footer.tagline }}</p>
+            src="{{ site.baseurl }}/assets/img/logo/m.png"
+            alt="Mzansi Bonds"
+            class="footer__right-image">
+          <p class="footer__tagline">{{ site.data.sitetext.footer.tagline | replace: 'your dream', 'your<br>dream' }}</p>
         </div>
       </div>
     </div>
