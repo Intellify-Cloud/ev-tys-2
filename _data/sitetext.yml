@@ -379,9 +379,9 @@ footer:
       icon: "linkedin"
       url: "https://www.linkedin.com/company/mzansibonds"
   policy_links:
-    - title: "Privacy Policy"
+    - policy: "Privacy Policy"
       url: "/privacy-statement"
-    - title: "T&C's"
+    - tcs: "T&C's"
       url: "/legal"
   legal: "Powered by evo Home Loans"
   design_credit: 'Website by <a href="https://www.intellify.co.za/" target="_blank" rel="noopener noreferrer" class="font-bold hover:text-mzansi-orange">Intellify</a>'

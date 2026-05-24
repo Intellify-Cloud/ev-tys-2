@@ -84,7 +84,7 @@
 
       <div class="footer__column footer__column--policies">
         {% for link in site.data.sitetext.footer.policy_links %}
-          <a href="{{ site.baseurl }}{{ link.url }}" class="footer__policy-link">{{ link.title }}</a>
+          <a href="{{ site.baseurl }}{{ link.url }}" class="footer__policy-link">{{ link.policy | default: link.tcs }}</a>
           {% unless forloop.last %}<span class="footer__divider">/</span>{% endunless %}
         {% endfor %}
       </div>
