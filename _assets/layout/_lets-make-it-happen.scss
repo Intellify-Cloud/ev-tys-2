@@ -6,6 +6,7 @@
   background-color: #5E203F;
   position: relative;
   overflow: hidden;
+  max-height: 560px;
 }
 
 .lets-make-it-happen__container {
@@ -16,6 +17,7 @@
   gap: 0;
   align-items: stretch;
   min-height: 525px;
+  max-height: 560px;
 }
 
 .lets-make-it-happen__content {
@@ -25,9 +27,11 @@
   justify-content: center;
   z-index: 2;
   position: relative;
-  max-width: 620px;
-  margin-left: auto;
-  padding: 72px 72px 72px 20px;
+  width: 700px;
+  max-width: calc(100% - 225px);
+  margin-left: 225px;
+  margin-right: auto;
+  padding: 72px 72px 72px 0;
 }
 
 .lets-make-it-happen__title {
@@ -41,7 +45,7 @@
 
 .lets-make-it-happen__description {
   max-width: 520px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   font-weight: 600;
   color: #ffffff;
@@ -49,21 +53,27 @@
 }
 
 .lets-make-it-happen__button {
-  display: inline-block;
-  padding: 16px 48px;
-  background-color: #d4a5c8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 0 48px;
+  background-color: rgb(249, 211, 227);
   color: #5E203F;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
-  width: fit-content;
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 56px;
 
   &:hover {
-    background-color: #c896bd;
+    background-color: rgb(242, 194, 214);
     color: #5E203F;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
@@ -97,6 +107,11 @@
   .lets-make-it-happen__container {
     grid-template-columns: 1fr;
     min-height: auto;
+    max-height: none;
+  }
+
+  .lets-make-it-happen {
+    max-height: none;
   }
 
   .lets-make-it-happen__content {
@@ -116,6 +131,8 @@
   .lets-make-it-happen__button {
     padding: 14px 40px;
     font-size: 16px;
+    width: fit-content;
+    max-width: 100%;
   }
 
   .lets-make-it-happen__image {

@@ -1,6 +1,50 @@
+{% if include.variant == "hero" %}
+<!-- BEGIN: HeroNavigation -->
+<header class="w-full px-6 py-6 md:py-8 z-10" data-purpose="site-navigation">
+  <div class="max-w-[1200px] mx-auto flex justify-between items-center">
+    <a class="flex items-center" data-purpose="logo" href="{{ site.baseurl }}/">
+      <img
+        alt="Mzansi Bonds"
+        class="h-[76px] w-auto"
+        src="{{ site.baseurl }}/assets/img/logo/mzansi-bonds-logo.png">
+    </a>
+
+    <div class="flex items-center space-x-6">
+      <a
+        class="hidden md:block bg-[#FF4500] text-white px-[43px] py-[14px] rounded-full font-bold text-[20.7px] hover:bg-orange-600 transition-colors"
+        data-purpose="cta-button-header"
+        href="{{ site.baseurl }}/#get-started">
+        {{ site.data.sitetext.hero.button }}
+      </a>
+
+      <button
+        aria-label="Menu"
+        class="flex flex-col justify-center items-end group"
+        data-purpose="mobile-menu-toggle"
+        type="button">
+        <span class="menu-line w-8"></span>
+        <span class="menu-line w-8"></span>
+        <span class="menu-line w-8"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<!-- END: HeroNavigation -->
+
+<script data-purpose="navigation-logic">
+  (function () {
+    const menuBtn = document.querySelector('[data-purpose="mobile-menu-toggle"]');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', function () {
+        document.body.classList.toggle('mobile-menu-open');
+      });
+    }
+  })();
+</script>
+{% else %}
 <!-- BEGIN: MainHeader -->
 <header class="fixed top-2 left-0 right-0 z-50 mx-auto px-6 max-w-[1200px] py-2" data-purpose="site-navigation">
-  <div class="bg-[#c8e6d8]/90 backdrop-blur-sm rounded-[16px] px-8 py-3 flex justify-between items-center" style="box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);">
+  <div class="bg-[#bde3d3]/90 backdrop-blur-sm rounded-[16px] px-8 py-3 flex justify-between items-center" style="box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);">
     <!-- Logo -->
     <a href="{{ site.baseurl }}/" class="flex items-center">
       <img src="{{ site.baseurl }}/assets/img/logo/mzansi-bonds-logo.png" alt="Mzansi Bonds" class="h-12 w-auto">
@@ -27,3 +71,4 @@
   </div>
 </header>
 <!-- END: MainHeader -->
+{% endif %}

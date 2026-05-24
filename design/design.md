@@ -14,10 +14,10 @@
 |---|---|---|
 | `mzansi-orange` | `#F15A24` | Primary CTA, headings, accents, floating buttons |
 | `mzansi-cream` | `#FDF9EB` | Page background |
-| `mzansi-teal` | `#B8D5C1` | Section backgrounds (hero card, steps section) |
+| `mzansi-teal` | `#bde3d3` | Section backgrounds (hero card, steps section) |
 | `mzansi-purple` | `#4D1B36` | Body text, nav text, empowerment heading, step circles, newsletter card |
 | `mzansi-text` | `#4D1B36` | Alias for `mzansi-purple` — all body copy |
-| `mzansi-sage` | `#93A497` | Bank logo placeholder tiles |
+| `mzansi-sage` | `#bde3d3` | Bank logo placeholder tiles |
 | Pink accent | `#FCD8E8` | Calculator card background |
 | Form input | `#FFF9E5` | Lead form / newsletter input fields |
 

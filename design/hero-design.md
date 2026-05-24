@@ -33,7 +33,7 @@
 | Role | Value | Usage |
 |------|-------|-------|
 | Page background | `#f5f0e8` (warm cream/off-white) | Outer page bg |
-| Left panel bg | `#c8e6d8` (soft mint/sage) | Text column fill |
+| Left panel bg | `#bde3d3` (brand mint) | Text column fill |
 | Hero headline | `#e05a1e` (burnt orange) | Large display text |
 | Eyebrow text | `#2d5c45` (dark teal/forest green) | Small label above headline |
 | Body copy | `#2d5c45` (dark teal/forest green) | Paragraph text |

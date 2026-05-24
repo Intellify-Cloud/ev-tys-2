@@ -196,7 +196,7 @@ clients:
 banking_partners:
   section: banking-partners
   title: "Our trusted banking partners"
-  background_image: "/assets/img/sections/clients-bg.jpg"
+  background_image: "/assets/img/sections/banking-partners-bg.jpg"
   list:
     - title: "ABSA"
       logo: "assets/img/clients/absa-bw.png"
@@ -337,7 +337,7 @@ contact:
 
 footer:
   company_name: "Mzansi Bonds"
-  logo: "/assets/img/logo/mzansi-bonds-logo.png"
+  logo: "/assets/img/logo/mzansi-bonds-logo-stacked.png"
   tagline_icon: ""
   tagline: "Own your dream."
   copyright: "COPYRIGHT © 2026 Mzansi Bonds (Pty) LTD."

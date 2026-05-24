@@ -33,8 +33,8 @@
 ### Colour Palette
 | Role | Value | Usage |
 |------|-------|-------|
-| Section background | `#c8e6d8` (soft mint/sage green) | Full section bg |
-| Arch fill | `#b8dece` (slightly deeper mint) | Decorative arch shape |
+| Section background | `#bde3d3` (brand mint) | Full section bg |
+| Arch fill | `#bde3d3` (brand mint) | Decorative arch shape |
 | Step circles | `#5c1f3c` (deep plum/burgundy) | Circle fills |
 | Step text | `#ffffff` | Labels inside circles |
 | Headline | `#3d1028` (dark maroon) | H1, CTA link |

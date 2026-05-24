@@ -4,7 +4,8 @@
 
 .banking-partners {
   position: relative;
-  padding: 80px 20px;
+  padding: 130px 20px 120px;
+  height: 540px;
   background-size: cover;
   background-position: center;
   background-color: #1b7f7e;
@@ -14,7 +15,7 @@
 .banking-partners__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(27, 127, 126, 0.75);
+  background-color: rgba(9, 66, 55, 0.87);
   z-index: 1;
 }
 
@@ -30,7 +31,7 @@
   font-size: 48px;
   line-height: 1.2;
   font-weight: 600;
-  color: #ffffff;
+  color: #fdf9e9;
   margin: 0 0 60px 0;
   letter-spacing: -0.5px;
 }
@@ -91,16 +92,16 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(99%) sepia(11%) saturate(220%) hue-rotate(329deg) brightness(102%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(98%) sepia(13%) saturate(374%) hue-rotate(333deg) brightness(104%) contrast(98%);
   transition: filter 0.3s ease;
 
   .banking-partners__logo-item:hover & {
-    filter: brightness(0) saturate(100%) invert(88%) sepia(9%) saturate(260%) hue-rotate(329deg) brightness(92%) contrast(92%);
+    filter: brightness(0) saturate(100%) invert(98%) sepia(13%) saturate(374%) hue-rotate(333deg) brightness(104%) contrast(98%);
   }
 }
 
 .banking-partners__logo-text {
-  color: #ffffff;
+  color: #fdf9e9;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
@@ -142,6 +143,7 @@
 @media (max-width: 768px) {
   .banking-partners {
     padding: 60px 16px;
+    height: auto;
   }
 
   .banking-partners__title {
