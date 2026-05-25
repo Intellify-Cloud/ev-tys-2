@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bond Calculator
+title: Bond Repayment Calculator
 background: white
 hide_contact_strip: true
 hide_page_nav: true
@@ -70,7 +70,6 @@ hide_page_nav: true
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 .calculator-wrapper iframe {
   width: 100%;
@@ -81,16 +80,47 @@ hide_page_nav: true
 .bond-calc {
   min-height: 75vh;
 }
+.btn-prequalify {
+  background: #e8522a;
+  color: white;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 32px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.btn-prequalify:hover {
+  background: #d04422;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
 /* --- Responsive (768px breakpoint) --- */
 @media (max-width: 768px) {
-  .hero-banner { height: auto; overflow: visible; }
-  .hero-banner img { height: auto; }
+  .hero-banner { height: 350px; overflow: hidden; }
+  .hero-banner img { height: 100%; object-fit: cover; }
   .hero-heading {
-    left: 16px;
-    bottom: 16px;
+    top: 61.8%;
+    left: 50%;
+    bottom: auto;
+    width: calc(100% - 32px);
+    max-width: 414px;
+    text-align: center;
+    transform: translate(-50%, calc(-50% + 50px));
+  }
+  .hero-banner [data-purpose="cta-button-header"] { display: none; }
+  .hero-banner [data-purpose="mobile-menu-toggle"] {
+    transform: scale(1.15);
+    transform-origin: center;
   }
   .calculator-section { padding: 32px 16px; }
   .calculator-wrapper iframe { height: 560px; }
+  .bond-calc { min-height: 100vh; }
 }
 
 @media (min-width: 769px) {
@@ -105,6 +135,9 @@ hide_page_nav: true
   }
   .hero-banner [data-purpose="site-navigation"] [data-purpose="logo"] img {
     height: 83px;
+  }
+  .hero-banner [data-purpose="cta-button-header"] {
+    transform: translateX(-70px);
   }
   .hero-heading {
     top: 285px;
@@ -130,20 +163,17 @@ hide_page_nav: true
   </h1>
 </div>
 
-<!-- ============================================ -->
+<!-- ================= -->
 <!-- Section 2: Bond Repayment Calculator         -->
-<!-- ============================================ -->
+<!-- ================= -->
 <div class="calculator-section">
-  <h2>Bond Repayment Calculator</h2>
-  <p class="calculator-subtext">
-    Use our simple bond repayment calculator to estimate your monthly home loan repayments based on the purchase price, deposit, interest rate and loan term.
-  </p>
-
   <div class="calculator-wrapper">
     <iframe class="bond-calc" frameborder="0"
         src="https://www.ooba.co.za/calculators/bond-repayment-calculator?iframe=true&iftype=evogroup"
-        title="Bond Calculator"></iframe>
+        title="Bond Repayment Calculator"></iframe>
   </div>
+
+  <a href="/pre-qualify" class="btn-prequalify">Get pre-qualified now.</a>
 </div>
 
 {% include 2-card-calc-section.html %}

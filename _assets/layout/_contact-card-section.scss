@@ -1,0 +1,129 @@
+// ======================================================
+// layout/_contact-card-section.scss
+// ======================================================
+
+$contact-card-purple: rgb(94, 31, 62);
+$contact-card-orange: #e8522a;
+$contact-card-white: #ffffff;
+
+.contact-card-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.contact-card-section__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 16px;
+  background: $contact-card-purple;
+  color: $contact-card-white;
+}
+
+.contact-card-section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card-section__title {
+  margin: 0 0 18px;
+  color: $contact-card-white;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.contact-card-section__text {
+  max-width: 500px;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.contact-card-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-card-section__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  color: $contact-card-white;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+
+  &:hover {
+    color: $contact-card-white;
+    opacity: 0.9;
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+
+.contact-card-section__button--call {
+  border: 2px solid $contact-card-white;
+  background: transparent;
+}
+
+.contact-card-section__button--email {
+  border: 2px solid $contact-card-orange;
+  background: $contact-card-orange;
+}
+
+.contact-card-section__photo-wrap {
+  min-height: 420px;
+}
+
+.contact-card-section__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .contact-card-section {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .contact-card-section__card {
+    grid-template-columns: 1fr;
+    position: relative;
+    min-height: 420px;
+  }
+
+  .contact-card-section__content {
+    min-height: 420px;
+    padding: 32px 24px;
+  }
+
+  .contact-card-section__title {
+    font-size: 32px;
+  }
+
+  .contact-card-section__photo-wrap {
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .contact-card-section__photo {
+    height: 100%;
+  }
+}

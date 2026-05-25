@@ -78,7 +78,7 @@ calculators:
       link:
         url: /affordability-calculator
         text: "Calculate"
-    - title: "Repayment Calculator"
+    - title: "Bond Repayment Calculator"
       desc: "Calculate your monthly bond repayments."
       icon: fas fa-calculator
       link:
@@ -348,13 +348,46 @@ testimonials:
 
 contact:
   title: "Get in Touch"
-  text: "We're here to help. First-time buyer or refinancing? We'll guide you through every step."
+  hero_title: "Let's get you started"
+  text: "Fill out the form below and we'll get in touch to assist you in securing the best deal from the banks."
   section: contact
+  background_image: "/assets/img/sections/lg2.jpg"
+  form:
+    first_name_label: "First Name"
+    first_name_placeholder: "Enter your first name"
+    last_name_label: "Last name"
+    last_name_placeholder: "Enter your last name"
+    email_label: "Email Address"
+    email_placeholder: "name@example.com"
+    phone_label: "Phone number"
+    phone_placeholder: "+27 820 000 000"
+    message_label: "Message"
+    message_placeholder: "Tell us about your home loan needs - are you buying, building, or refinancing? What is your approximate property value and deposit?"
+    submit_text: "Submit"
+    sending_text: "Sending..."
+    success_message: "Thank you - your enquiry has been received. A consultant will be in touch shortly."
+    error_message: "Sorry, something went wrong. Please call us directly and we will assist you with your home loan application."
+    config_error_message: "Contact form is not configured. Please call us directly for home loan assistance."
+    first_name_error: "First name is required"
+    last_name_error: "Last name is required"
+    email_required_error: "Email address is required"
+    email_invalid_error: "Please enter a valid email address"
+    phone_error: "Phone number is required"
   office_hours:
     title: "Office Hours"
     lines:
       - "OPEN : 9 AM - 5 PM, MON to FRI"
       - "CLOSED : Sat, Sun & Public Holidays"
+
+contact_card_section:
+  title: "Get in touch"
+  text: "Our experts are here to help. First-time buyer or refinancing? We'll guide you through every step."
+  call_text: "Call me back"
+  call_link: "tel:+27820590846"
+  email_text: "Email us"
+  email_link: "mailto:hello@mzansibonds.co.za"
+  image: "/assets/img/sections/3col-centre.png"
+  image_alt: "Mzansi Bonds consultant"
 
 footer:
   company_name: "Mzansi Bonds"
@@ -374,7 +407,7 @@ footer:
       url: "/contact"
   resources_title: "Resources"
   resources:
-    - title: "Bond Calculator"
+    - title: "Bond Repayment Calculator"
       url: "/bond-calculator"
     - title: "Affordability Calculator"
       url: "/affordability-calculator"

@@ -1,12 +1,13 @@
 <!-- Contact -->
 <section class="contact-section" id="{{ site.data.sitetext.contact.section | default: 'contact' }}">
-  <div class="contact-hero-form" style="background-image: url('{{ site.baseurl }}/assets/img/sections/lg2.jpeg');">
+  <div class="contact-hero-form" style="background-image: url('{{ site.baseurl }}{{ site.data.sitetext.contact.background_image | default: '/assets/img/sections/lg2.jpg' }}');">
     <div class="contact-hero-form__overlay"></div>
+    {% include nav.html variant="hero" %}
     <div class="contact-container contact-hero-form__inner">
       <div class="contact-heading">
-        <h1 class="contact-heading__title">Let's get you started</h1>
+        <h1 class="contact-heading__title">{{ site.data.sitetext.contact.hero_title }}</h1>
         <p class="contact-heading__text">
-          {{ site.data.sitetext.contact.text | default: "We're here to help. First-time buyer or refinancing? We'll guide you through every step." }}
+          {{ site.data.sitetext.contact.text }}
         </p>
       </div>
 
@@ -18,70 +19,51 @@
 
         <div class="contact-form__grid">
           <div class="form-field">
-            <label for="firstName">First Name <span class="req">*</span></label>
-            <input id="firstName" name="firstName" type="text" class="form-input" placeholder="First Name" />
+            <label for="firstName">{{ site.data.sitetext.contact.form.first_name_label }} <span class="req">*</span></label>
+            <input id="firstName" name="firstName" type="text" class="form-input" placeholder="{{ site.data.sitetext.contact.form.first_name_placeholder }}" />
             <span class="error-message" id="error-firstName"></span>
           </div>
 
           <div class="form-field">
-            <label for="lastName">Last Name <span class="req">*</span></label>
-            <input id="lastName" name="lastName" type="text" class="form-input" placeholder="Last Name" />
+            <label for="lastName">{{ site.data.sitetext.contact.form.last_name_label }} <span class="req">*</span></label>
+            <input id="lastName" name="lastName" type="text" class="form-input" placeholder="{{ site.data.sitetext.contact.form.last_name_placeholder }}" />
             <span class="error-message" id="error-lastName"></span>
           </div>
 
           <div class="form-field">
-            <label for="emailAddress">Email Address <span class="req">*</span></label>
-            <input id="emailAddress" name="emailAddress" type="email" class="form-input" placeholder="Email Address" />
+            <label for="emailAddress">{{ site.data.sitetext.contact.form.email_label }} <span class="req">*</span></label>
+            <input id="emailAddress" name="emailAddress" type="email" class="form-input" placeholder="{{ site.data.sitetext.contact.form.email_placeholder }}" />
             <span class="error-message" id="error-emailAddress"></span>
           </div>
 
           <div class="form-field">
-            <label for="phoneNumber">Phone Number <span class="req">*</span></label>
-            <input id="phoneNumber" name="phoneNumber" type="tel" class="form-input" placeholder="Phone Number" />
+            <label for="phoneNumber">{{ site.data.sitetext.contact.form.phone_label }} <span class="req">*</span></label>
+            <input id="phoneNumber" name="phoneNumber" type="tel" class="form-input" placeholder="{{ site.data.sitetext.contact.form.phone_placeholder }}" />
             <span class="error-message" id="error-phoneNumber"></span>
           </div>
 
           <div class="form-field form-field--full">
-            <label for="content">Message</label>
-            <textarea id="content" name="content" rows="5" class="form-input form-textarea" placeholder="Tell us about your home loan needs"></textarea>
+            <label for="content">{{ site.data.sitetext.contact.form.message_label }}</label>
+            <textarea id="content" name="content" rows="5" class="form-input form-textarea" placeholder="{{ site.data.sitetext.contact.form.message_placeholder }}"></textarea>
             <span class="error-message" id="error-content"></span>
           </div>
         </div>
 
         <div id="status-sent" class="status-message success" style="display:none;">
-          Thank you - your enquiry has been received. A consultant will be in touch shortly.
+          {{ site.data.sitetext.contact.form.success_message }}
         </div>
         <div id="status-error" class="status-message error" style="display:none;">
-          Sorry, something went wrong. Please call us directly and we will assist you with your home loan application.
+          {{ site.data.sitetext.contact.form.error_message }}
         </div>
 
         <button type="submit" id="submitBtn" class="btn-submit">
-          <span>Submit</span>
+          <span>{{ site.data.sitetext.contact.form.submit_text }}</span>
         </button>
       </form>
     </div>
   </div>
 
-  <div class="contact-container contact-touch-wrap">
-    <article class="get-in-touch-card">
-      <div class="get-in-touch-card__content">
-        <h2 class="get-in-touch-card__title">Get in touch</h2>
-        <p class="get-in-touch-card__text">
-          Whether you are buying your first home, upgrading, or refinancing, our team is ready to help you move forward with confidence.
-        </p>
-        <div class="get-in-touch-card__actions">
-          <a class="btn-call" href="tel:+27820590846">Call me back</a>
-          <a class="btn-email" href="mailto:hello@mzansibonds.co.za">Email us</a>
-        </div>
-      </div>
-      <div class="get-in-touch-card__photo-wrap">
-        <img
-          src="{{ site.baseurl }}/assets/img/sections/3col-centre.png"
-          alt="Mzansi Bonds consultant"
-          class="get-in-touch-card__photo">
-      </div>
-    </article>
-  </div>
+  {% include contact-card-section.html %}
 </section>
 <!-- End Contact -->
 
@@ -134,16 +116,16 @@
       let isValid = true;
       clearErrors();
 
-      if (!fields.firstName.value.trim()) { setError('firstName', 'First name is required'); isValid = false; }
-      if (!fields.lastName.value.trim()) { setError('lastName', 'Last name is required'); isValid = false; }
+      if (!fields.firstName.value.trim()) { setError('firstName', '{{ site.data.sitetext.contact.form.first_name_error }}'); isValid = false; }
+      if (!fields.lastName.value.trim()) { setError('lastName', '{{ site.data.sitetext.contact.form.last_name_error }}'); isValid = false; }
 
       if (!fields.emailAddress.value.trim()) {
-        setError('emailAddress', 'Email address is required'); isValid = false;
+        setError('emailAddress', '{{ site.data.sitetext.contact.form.email_required_error }}'); isValid = false;
       } else if (!isValidEmail(fields.emailAddress.value)) {
-        setError('emailAddress', 'Please enter a valid email address'); isValid = false;
+        setError('emailAddress', '{{ site.data.sitetext.contact.form.email_invalid_error }}'); isValid = false;
       }
 
-      if (!fields.phoneNumber.value.trim()) { setError('phoneNumber', 'Phone number is required'); isValid = false; }
+      if (!fields.phoneNumber.value.trim()) { setError('phoneNumber', '{{ site.data.sitetext.contact.form.phone_error }}'); isValid = false; }
 
       return isValid;
     }
@@ -153,13 +135,13 @@
       if (!validateForm()) return;
 
       if (!API_URL) {
-        statusError.textContent = 'Contact form is not configured. Please call us directly for home loan assistance.';
+        statusError.textContent = '{{ site.data.sitetext.contact.form.config_error_message }}';
         statusError.style.display = 'block';
         return;
       }
 
       submitBtn.disabled = true;
-      submitBtn.querySelector('span').textContent = 'Sending...';
+      submitBtn.querySelector('span').textContent = '{{ site.data.sitetext.contact.form.sending_text }}';
 
       try {
         const body = {
@@ -189,7 +171,7 @@
 
       } finally {
         submitBtn.disabled = false;
-        submitBtn.querySelector('span').textContent = 'Submit';
+        submitBtn.querySelector('span').textContent = '{{ site.data.sitetext.contact.form.submit_text }}';
       }
     }
 
