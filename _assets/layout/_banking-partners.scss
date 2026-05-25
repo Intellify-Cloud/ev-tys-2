@@ -51,6 +51,8 @@
   scroll-behavior: smooth;
   padding: 20px 0;
   flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -70,6 +72,7 @@
   border-radius: 0;
   padding: 16px;
   transition: transform 0.3s ease;
+  scroll-snap-align: center;
 
   &:hover {
     transform: translateY(-4px);
@@ -157,6 +160,8 @@
 
   .banking-partners__carousel {
     gap: 16px;
+    padding-left: calc((100vw - 212px) / 2);
+    padding-right: calc((100vw - 212px) / 2);
   }
 
   .banking-partners__logo-item {
@@ -193,10 +198,17 @@
 
   .banking-partners__carousel-wrapper {
     gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .banking-partners__carousel {
     gap: 12px;
+    width: 100%;
+    order: 1;
+    padding-left: calc((100vw - 159px) / 2);
+    padding-right: calc((100vw - 159px) / 2);
   }
 
   .banking-partners__logo-item {
@@ -213,10 +225,21 @@
   .banking-partners__nav-arrow {
     width: 36px;
     height: 36px;
+    margin-top: 10px;
+    flex: none;
+    order: 2;
 
     svg {
       width: 18px;
       height: 18px;
     }
+  }
+
+  .banking-partners__nav-arrow--prev {
+    margin-right: 8px;
+  }
+
+  .banking-partners__nav-arrow--next {
+    margin-left: 8px;
   }
 }

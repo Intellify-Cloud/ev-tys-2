@@ -108,6 +108,7 @@
     grid-template-columns: 1fr;
     min-height: auto;
     max-height: none;
+    justify-items: center;
   }
 
   .lets-make-it-happen {
@@ -116,8 +117,11 @@
 
   .lets-make-it-happen__content {
     max-width: none;
-    margin: 0;
-    padding: 60px 24px;
+    width: auto;
+    margin: 0 auto;
+    padding: 60px 5%;
+    align-items: center;
+    text-align: center;
   }
 
   .lets-make-it-happen__title {
@@ -136,18 +140,23 @@
   }
 
   .lets-make-it-happen__image {
-    min-height: 320px;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .lets-make-it-happen__container {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .lets-make-it-happen__content {
     gap: 20px;
-    padding: 44px 20px;
+    width: auto;
+    margin: 0 auto;
+    padding: 44px 5%;
+    align-items: center;
+    text-align: center;
   }
 
   .lets-make-it-happen__title {
