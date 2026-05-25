@@ -5,7 +5,9 @@ layout: default
 {% unless page.hide_contact_strip %}
 {% include contact-strip.html %}
 {% endunless %}
+{% unless page.hide_page_nav %}
 {% include nav.html %}
+{% endunless %}
 
 {% if page.background == "grey" or page.background == "gray" %}
 <script>

@@ -208,7 +208,7 @@ header.hero {
       width: 100vw;
       height: 380px;
       margin: 0;
-    transform: translateX(-25%);
+    transform: translateX(0);
 
       &::after {
         background-image: url("/assets/img/hero/hero-mobile.png") !important;

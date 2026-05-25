@@ -1,6 +1,6 @@
 <!-- BEGIN: MainFooter -->
 <footer class="footer">
-  <div class="footer__container">
+  <div class="footer__container footer__desktop">
     <div class="footer__row footer__row--main">
       <div class="footer__column footer__column--logo">
         <div class="footer__logo-wrapper">
@@ -88,6 +88,90 @@
           {% unless forloop.last %}<span class="footer__divider">/</span>{% endunless %}
         {% endfor %}
       </div>
+    </div>
+  </div>
+
+  <div class="footer__mobile">
+    <div class="footer-mobile__row footer-mobile__row--primary">
+      <div class="footer-mobile__column footer-mobile__brand">
+        <img
+          src="{{ site.baseurl }}/assets/img/logo/m.png"
+          alt="Mzansi Bonds"
+          class="footer-mobile__mark">
+        <p class="footer-mobile__tagline">{{ site.data.sitetext.footer.tagline | replace: 'your dream', 'your<br>dream' }}</p>
+      </div>
+
+      <div class="footer-mobile__column">
+        <h4 class="footer-mobile__heading">{{ site.data.sitetext.footer.quicklinks_title }}</h4>
+        <ul class="footer-mobile__list">
+          {% for link in site.data.sitetext.footer.quicklinks %}
+          <li><a href="{{ site.baseurl }}{{ link.url }}" class="footer-mobile__link">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-mobile__column">
+        <h4 class="footer-mobile__heading">{{ site.data.sitetext.footer.resources_title }}</h4>
+        <ul class="footer-mobile__list">
+          {% for link in site.data.sitetext.footer.resources %}
+          <li><a href="{{ site.baseurl }}{{ link.url }}" class="footer-mobile__link">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-mobile__row footer-mobile__row--contact">
+      <div class="footer-mobile__column footer-mobile__social">
+        <div class="footer-mobile__social-icons">
+          {% for social in site.data.sitetext.footer.social_links %}
+          <a
+            href="{{ social.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-mobile__social-link"
+            title="{{ social.title }}"
+            aria-label="{{ social.title }}">
+            <i class="fab fa-{{ social.icon }}"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="footer-mobile__column">
+        <h4 class="footer-mobile__heading">{{ site.data.sitetext.footer.contact_title }}</h4>
+        <ul class="footer-mobile__contact-list">
+          {% for contact in site.data.sitetext.footer.contact_info %}
+          <li class="footer-mobile__contact-item">
+            {% if contact.type == 'email' %}
+              <i class="fas fa-envelope footer-mobile__contact-icon"></i>
+              <a href="mailto:{{ contact.value }}" class="footer-mobile__link">{{ contact.value }}</a>
+            {% elsif contact.type == 'phone' %}
+              <i class="fas fa-phone footer-mobile__contact-icon"></i>
+              <a href="tel:{{ contact.value }}" class="footer-mobile__link">{{ contact.value }}</a>
+            {% elsif contact.type == 'whatsapp' %}
+              <i class="fab fa-whatsapp footer-mobile__contact-icon"></i>
+              <a href="https://wa.me/{{ contact.value }}" class="footer-mobile__link" target="_blank" rel="noopener noreferrer">{{ contact.display }}</a>
+            {% elsif contact.type == 'hours' %}
+              <i class="fas fa-clock footer-mobile__contact-icon"></i>
+              <span class="footer-mobile__contact-text">{{ contact.value }}</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-mobile__row footer-mobile__row--policies">
+      <div class="footer-mobile__policy-group">
+        {% for link in site.data.sitetext.footer.policy_links %}
+          <a href="{{ site.baseurl }}{{ link.url }}" class="footer-mobile__policy-link">{{ link.policy | default: link.tcs }}</a>
+          {% unless forloop.last %}<span class="footer-mobile__divider">/</span>{% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="footer-mobile__row footer-mobile__row--copyright">
+      <p class="footer-mobile__copyright">{{ site.data.sitetext.footer.copyright }}</p>
     </div>
   </div>
 </footer>

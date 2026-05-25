@@ -1,0 +1,44 @@
+{% assign section = site.data.sitetext.two_card_calc_section %}
+
+<!-- BEGIN: TwoCardCalcSection -->
+<section
+  id="{{ section.section | default: '2-card-calc-section' }}"
+  class="two-card-calc-section"
+  data-purpose="2-card-calc-section">
+  <div class="two-card-calc-section__inner">
+    <h2 class="two-card-calc-section__heading">
+      {{ section.heading }}
+    </h2>
+
+    <div class="two-card-calc-section__grid">
+      {% for card in section.cards %}
+      <article class="two-card-calc-section__card two-card-calc-section__card--{{ card.theme }}">
+        <img
+          class="two-card-calc-section__image"
+          src="{{ site.baseurl }}{{ card.image }}"
+          alt="{{ card.image_alt }}"
+          loading="lazy">
+
+        <div class="two-card-calc-section__content">
+          <div>
+            <h3 class="two-card-calc-section__card-title">{{ card.title }}</h3>
+            <p class="two-card-calc-section__card-copy">{{ card.description }}</p>
+          </div>
+
+          {% if card.button_type == 'phone' %}
+            {% assign phone_href = site.contact.phone | replace: ' ', '' %}
+            <a href="tel:{{ phone_href }}" class="two-card-calc-section__button two-card-calc-section__button--orange">
+              {{ card.button_text }}
+            </a>
+          {% else %}
+            <a href="{{ site.baseurl }}{{ card.button_link }}" class="two-card-calc-section__button two-card-calc-section__button--light">
+              {{ card.button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- END: TwoCardCalcSection -->

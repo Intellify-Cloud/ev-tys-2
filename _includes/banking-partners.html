@@ -64,26 +64,59 @@
       const prevBtn = section.querySelector('.banking-partners__nav-arrow--prev');
       const nextBtn = section.querySelector('.banking-partners__nav-arrow--next');
       const scrollAmount = 280;
+      let autoPlayInterval;
 
       if (!carousel) return;
 
+      // Auto-play function
+      function autoPlay() {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        
+        // Reset to start when reaching the end
+        setTimeout(function () {
+          if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+            carousel.scrollLeft = 0;
+          }
+        }, 500);
+      }
+
+      // Start auto-play
+      autoPlayInterval = setInterval(autoPlay, 3000);
+
+      // Pause on hover
+      carousel.addEventListener('mouseenter', function () {
+        clearInterval(autoPlayInterval);
+      });
+
+      carousel.addEventListener('mouseleave', function () {
+        autoPlayInterval = setInterval(autoPlay, 3000);
+      });
+
       if (prevBtn) {
         prevBtn.addEventListener('click', function () {
+          clearInterval(autoPlayInterval);
           carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          autoPlayInterval = setInterval(autoPlay, 3000);
         });
       }
 
       if (nextBtn) {
         nextBtn.addEventListener('click', function () {
+          clearInterval(autoPlayInterval);
           carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          autoPlayInterval = setInterval(autoPlay, 3000);
         });
       }
 
       carousel.addEventListener('keydown', function (e) {
         if (e.key === 'ArrowLeft') {
+          clearInterval(autoPlayInterval);
           carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          autoPlayInterval = setInterval(autoPlay, 3000);
         } else if (e.key === 'ArrowRight') {
+          clearInterval(autoPlayInterval);
           carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          autoPlayInterval = setInterval(autoPlay, 3000);
         }
       });
     });

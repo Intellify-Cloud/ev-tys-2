@@ -116,6 +116,27 @@ more-calculators:
         url: /additional-payment-calculator
         text: "Calculate"
 
+two_card_calc_section:
+  section: 2-card-calc-section
+  heading: "We're here for you,<br>what do you need?"
+  cards:
+    - theme: purple
+      image: /assets/img/sections/image-left.jpg
+      image_alt: "Speak to an expert"
+      title: "Speak to<br>an expert"
+      description: "Our experts are<br>available to speak<br>to you"
+      button_text: "Call me back"
+      button_type: phone
+      button_link: ""
+    - theme: orange
+      image: /assets/img/sections/image-right.jpg
+      image_alt: "Home loans pre-approval"
+      title: "Home<br>Loans"
+      description: "Pre-approval and<br>bonds."
+      button_text: "Apply now!"
+      button_type: link
+      button_link: "/"
+
 textblock:
   title: "The Process"
   text: ""
