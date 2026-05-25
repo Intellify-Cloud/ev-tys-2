@@ -208,11 +208,12 @@ header.hero {
       width: 100vw;
       height: 380px;
       margin: 0;
-      transform: none;
+    transform: translateX(-25%);
 
       &::after {
-        border-radius: 0;
-        box-shadow: none;
+        background-image: url("/assets/img/hero/hero-mobile.png") !important;
+        background-position: center center !important;
+        background-size: cover !important;
       }
 
       &::before {
@@ -224,6 +225,15 @@ header.hero {
       order: 2;
       width: 100%;
       padding: 0 $gap-md;
+    }
+
+    .hero-container {
+      background-position: center center;
+    }
+
+    [data-purpose="site-navigation"] [data-purpose="logo"] img {
+      height: 61px;
+      width: auto;
     }
   }
 }
