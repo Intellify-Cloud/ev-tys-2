@@ -7,7 +7,7 @@ nav:
     section: get-started
 
   - title: "Calculators"
-    url: /bond-calculator
+    url: /bond-repayment-calculator
 
   - title: "Contact"
     url: /contact

@@ -159,7 +159,7 @@ hide_page_nav: true
         title="Bond Affordability Calculator"></iframe>
   </div>
 
-  <a href="/pre-qualify" class="btn-prequalify">Get pre-qualified now.</a>
+   <a href="/contact" class="btn-prequalify">Get pre-qualified now.</a>
 </div>
 
 {% include 2-card-calc-section.html %}

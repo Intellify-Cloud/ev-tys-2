@@ -81,18 +81,18 @@ hide_page_nav: true
   min-height: 75vh;
 }
 .btn-prequalify {
-  background: #e8522a;
-  color: white;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 32px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 32px;
-  cursor: pointer;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
+   background: #e8522a;
+   color: white;
+   padding: 14px 36px;
+   border: none;
+   border-radius: 32px;
+   font-size: 1.2rem;
+   font-weight: 600;
+   margin-top: 32px;
+   cursor: pointer;
+   display: inline-block;
+   transition: background 0.3s ease, transform 0.2s ease;
+   text-decoration: none;
 }
 .btn-prequalify:hover {
   background: #d04422;
@@ -167,13 +167,13 @@ hide_page_nav: true
 <!-- Section 2: Bond Repayment Calculator         -->
 <!-- ================= -->
 <div class="calculator-section">
-  <div class="calculator-wrapper">
-    <iframe class="bond-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/bond-repayment-calculator?iframe=true&iftype=evogroup"
-        title="Bond Repayment Calculator"></iframe>
-  </div>
+   <div>
+       <iframe class="bond-calc" frameborder="0"
+           src="https://www.ooba.co.za/calculators/bond-repayment-calculator?iframe=true&iftype=evogroup"
+           title="Bond Calculator"></iframe>
+   </div>
 
-  <a href="/pre-qualify" class="btn-prequalify">Get pre-qualified now.</a>
+   <a href="/contact" class="btn-prequalify">Get pre-qualified now.</a>
 </div>
 
 {% include 2-card-calc-section.html %}

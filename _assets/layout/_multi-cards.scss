@@ -1,0 +1,236 @@
+// ======================================================
+// layout/_multi-cards.scss
+// ======================================================
+
+.multi-cards {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #bde3d3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.multi-cards__container {
+  max-width: 1478px;
+  margin: 0 auto;
+  padding: 180px 24px 140px;
+}
+
+.multi-cards__heading {
+  max-width: 920px;
+  margin: 0 auto 126px;
+  color: #ff4500;
+  font-size: 61px !important;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.multi-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  gap: 59px;
+  justify-content: center;
+}
+
+.multi-cards__card {
+  position: relative;
+  width: 450px;
+  height: 645px;
+  min-height: 645px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.multi-cards__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.multi-cards__newsletter-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13% 53px 0;
+  text-align: center;
+}
+
+.multi-cards__newsletter-title {
+  margin: 0 0 47px;
+  color: #ff4500;
+  font-size: 41px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.multi-cards__newsletter-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+}
+
+.multi-cards__newsletter-input {
+  width: 100%;
+  max-width: 350px;
+  height: 70px;
+  min-height: 70px;
+  border: 0;
+  border-radius: 5px !important;
+  background: #efecdb !important;
+  background-color: #efecdb !important;
+  box-shadow: inset 0 0 0 1000px #efecdb;
+  color: #807e7b;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 0 24px 0 15%;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.multi-cards__newsletter-input::placeholder {
+  color: #807e7b;
+  opacity: 1;
+}
+
+.multi-cards__newsletter-button,
+.multi-cards__calculator-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.multi-cards__newsletter-button {
+  align-self: center;
+  height: 72px;
+  min-width: 171px;
+  background: rgb(12, 80, 69);
+  color: #ffffff;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.multi-cards__newsletter-button:hover {
+  color: #ffffff;
+}
+
+.multi-cards__card--brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgb(94, 31, 62);
+  padding: 60px 66px 74px;
+}
+
+.multi-cards__mark {
+  position: absolute;
+  top: 42px;
+  right: 58px;
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+}
+
+.multi-cards__brand-title {
+  max-width: 280px;
+  margin: 0;
+  color: #f9d4e4;
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.multi-cards__calculator-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 218px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 25px 34px 36px;
+  background: transparent;
+}
+
+.multi-cards__calculator-title {
+  margin: 0 0 23px;
+  color: rgb(12, 80, 69);
+  font-size: 39px;
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.multi-cards__calculator-button {
+  min-width: 178px;
+  padding: 0 28px;
+  background: #ff4500;
+  color: #ffffff;
+}
+
+.multi-cards__calculator-button:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .multi-cards__container {
+    padding: 120px 24px 96px;
+  }
+
+  .multi-cards__heading {
+    margin-bottom: 70px;
+    font-size: 44px;
+  }
+
+  .multi-cards__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .multi-cards__card {
+    width: auto;
+    height: auto;
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .multi-cards__container {
+    padding: 80px 20px;
+  }
+
+  .multi-cards__heading {
+    margin-bottom: 42px;
+    font-size: 36px;
+  }
+
+  .multi-cards__grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .multi-cards__card {
+    min-height: 520px;
+  }
+}

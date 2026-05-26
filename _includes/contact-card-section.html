@@ -1,26 +1,45 @@
 {% assign card = site.data.sitetext.contact_card_section %}
 
+<style>
+.contact-card-section__button--call {
+  background: #f9d3e3;
+  border: none;
+  color: #e8522a;
+  border-radius: 24px;
+  padding: 10px 20px;
+}
+.contact-card-section__button--email {
+  background: #e8522a;
+  border: none;
+  color: white;
+  border-radius: 24px;
+  padding: 10px 20px;
+}
+</style>
+
 <!-- BEGIN: ContactCardSection -->
-<div class="contact-container contact-card-section">
-  <article class="contact-card-section__card">
-    <div class="contact-card-section__content">
-      <h2 class="contact-card-section__title">{{ card.title }}</h2>
-      <p class="contact-card-section__text">{{ card.text }}</p>
-      <div class="contact-card-section__actions">
-        <a class="contact-card-section__button contact-card-section__button--call" href="{{ card.call_link }}">
-          {{ card.call_text }}
-        </a>
-        <a class="contact-card-section__button contact-card-section__button--email" href="{{ card.email_link }}">
-          {{ card.email_text }}
-        </a>
+<div class="contact-card-section">
+  <div class="contact-container">
+    <article class="contact-card-section__card">
+      <div class="contact-card-section__content">
+        <h2 class="contact-card-section__title">{{ card.title }}</h2>
+        <p class="contact-card-section__text">{{ card.text }}</p>
+        <div class="contact-card-section__actions">
+          <a class="contact-card-section__button contact-card-section__button--call" href="{{ card.call_link }}">
+            {{ card.call_text }}
+          </a>
+          <a class="contact-card-section__button contact-card-section__button--email" href="{{ card.email_link }}">
+            {{ card.email_text }}
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="contact-card-section__photo-wrap">
-      <img
-        src="{{ site.baseurl }}{{ card.image }}"
-        alt="{{ card.image_alt }}"
-        class="contact-card-section__photo">
-    </div>
-  </article>
+      <div class="contact-card-section__photo-wrap">
+        <img
+          src="{{ site.baseurl }}{{ card.image }}"
+          alt="{{ card.image_alt }}"
+          class="contact-card-section__photo">
+      </div>
+    </article>
+  </div>
 </div>
 <!-- END: ContactCardSection -->

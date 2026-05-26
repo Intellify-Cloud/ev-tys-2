@@ -242,23 +242,23 @@
 }
 
 .footer-credit {
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #fdf9eb;
-  color: #5e203f;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+   min-height: 22px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background: #fdf9eb;
+   color: #5e203f;
+   font-size: 10px;
+   font-weight: 600;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
 
-  a {
-    color: #5e203f;
-    text-decoration: underline;
-  }
-}
+   a {
+     color: #5e203f;
+     text-decoration: underline;
+   }
+ }
 
 @media (max-width: 1024px) {
   .footer {

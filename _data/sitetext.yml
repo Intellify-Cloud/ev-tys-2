@@ -82,7 +82,7 @@ calculators:
       desc: "Calculate your monthly bond repayments."
       icon: fas fa-calculator
       link:
-        url: /bond-calculator
+        url: /bond-repayment-calculator
         text: "Calculate"
     - title: "Transfer Cost Calculator"
       desc: "Calculate your registration and transfer costs."
@@ -244,7 +244,7 @@ take_the_nextstep:
   heading_accent: "Let your next take you home."
   description: "Your next step might be moving in together, it might be moving to another city. It might be finding somewhere bigger for your growing family. Or it might be finding somewhere better suited to your stage of life. Whatever your next step is - it's the freedom to live life fully now."
   button_text: "Take your next step. Get pre-qualified now."
-  button_link: "/pre-qualify"
+  button_link: "/contact"
 
 as_easy_as:
   section: as-easy-as
@@ -259,7 +259,7 @@ as_easy_as:
   step_3_description: "We make it happen!"
   step_3_icon: "fas fa-key"
   button_text: "Apply now"
-  button_link: "/apply"
+  button_link: "/contact"
 
 lets_make_it_happen:
   section: lets-make-it-happen
@@ -351,7 +351,7 @@ contact:
   hero_title: "Let's get you started"
   text: "Fill out the form below and we'll get in touch to assist you in securing the best deal from the banks."
   section: contact
-  background_image: "/assets/img/sections/lg2.jpg"
+  background_image: "/assets/img/sections/contact-bg-1900.jpg"
   form:
     first_name_label: "First Name"
     first_name_placeholder: "Enter your first name"
@@ -386,7 +386,7 @@ contact_card_section:
   call_link: "tel:+27820590846"
   email_text: "Email us"
   email_link: "mailto:hello@mzansibonds.co.za"
-  image: "/assets/img/sections/3col-centre.png"
+  image: "/assets/img/sections/call-centre.png"
   image_alt: "Mzansi Bonds consultant"
 
 footer:
@@ -408,7 +408,7 @@ footer:
   resources_title: "Resources"
   resources:
     - title: "Bond Repayment Calculator"
-      url: "/bond-calculator"
+      url: "/bond-repayment-calculator"
     - title: "Affordability Calculator"
       url: "/affordability-calculator"
     - title: "Transfer Cost Calculator"
@@ -448,3 +448,23 @@ footer:
 engagement:
   heading: "Empowering South Africans through property ownership."
   copy: "We believe everyone deserves the opportunity to own their dream home."
+
+multi_cards:
+  background_image: "/assets/img/sections/contact-bg-1900.jpg"
+  heading: "Empowering South Africans<br>through property ownership."
+  newsletter:
+    title: "Sign up to our<br>newsletter."
+    input_label: "Email"
+    input_placeholder: "email"
+    button_text: "Sign up"
+    image: "/assets/img/sections/newsletter-couple.jpg"
+    image_alt: "Smiling couple"
+  brand:
+    title: "Your<br>home<br>is<br>waiting<br>for you."
+    icon: "/assets/img/logo/m.png"
+  calculator:
+    title: "Find out what<br>you can afford."
+    button_text: "Use our<br>Calculator"
+    button_link: "/affordability-calculator"
+    image: "/assets/img/sections/calculator.jpg"
+    image_alt: "Family sitting in their new home"

@@ -13,9 +13,10 @@ $contact-white: #ffffff;
 $contact-radius: 8px;
 
 .contact-section {
-  background: $contact-light-bg;
-  margin-left: -15px;
-  margin-right: -15px;
+  background: transparent;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: 0;
 }
 
 .contact-container {
@@ -26,6 +27,9 @@ $contact-radius: 8px;
 
 .contact-hero-form {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,19 +44,20 @@ $contact-radius: 8px;
 .contact-hero-form__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(240, 237, 230, 0.85);
+  background: rgba(240, 237, 230, 0.25);
   z-index: 1;
 }
 
 .contact-hero-form__inner {
   position: relative;
   z-index: 2;
+  flex: 1;
   padding-top: 52px;
   padding-bottom: 44px;
 }
 
 .contact-heading {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto 48px;
   text-align: center;
 }

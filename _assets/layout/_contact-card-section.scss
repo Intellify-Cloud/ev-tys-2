@@ -7,8 +7,11 @@ $contact-card-orange: #e8522a;
 $contact-card-white: #ffffff;
 
 .contact-card-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   padding-top: 60px;
   padding-bottom: 80px;
+  background: #CBE4D7;
 }
 
 .contact-card-section__card {
@@ -74,8 +77,14 @@ $contact-card-white: #ffffff;
 }
 
 .contact-card-section__button--call {
-  border: 2px solid $contact-card-white;
-  background: transparent;
+  border: 2px solid $contact-card-purple;
+  background: $contact-card-white;
+  color: $contact-card-purple;
+}
+
+.contact-card-section__button--call:hover {
+  background: rgba(94, 31, 62, 0.08);
+  color: $contact-card-purple;
 }
 
 .contact-card-section__button--email {

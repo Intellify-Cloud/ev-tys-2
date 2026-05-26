@@ -1,6 +1,19 @@
 <!-- Contact -->
 <section class="contact-section" id="{{ site.data.sitetext.contact.section | default: 'contact' }}">
-  <div class="contact-hero-form" style="background-image: url('{{ site.baseurl }}{{ site.data.sitetext.contact.background_image | default: '/assets/img/sections/lg2.jpg' }}');">
+  <style>
+    .form-input, .form-textarea {
+      background-color: #bfe1d1;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    #emailAddress {
+      width: 350px;
+      height: 70px;
+      color: #807e7b;
+      margin-left: 15%;
+    }
+  </style>
+  <div class="contact-hero-form" style="background-image: url('{{ site.baseurl }}/assets/img/sections/contact-bg-1900.jpg');">
     <div class="contact-hero-form__overlay"></div>
     {% include nav.html variant="hero" %}
     <div class="contact-container contact-hero-form__inner">
