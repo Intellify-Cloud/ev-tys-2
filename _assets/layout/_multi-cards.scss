@@ -131,6 +131,10 @@
   color: #ffffff;
 }
 
+.multi-cards__button-text--mobile {
+  display: none;
+}
+
 .multi-cards__card--brand {
   display: flex;
   flex-direction: column;
@@ -215,22 +219,165 @@
 }
 
 @media (max-width: 768px) {
+  .multi-cards {
+    background-position: center top;
+  }
+
   .multi-cards__container {
-    padding: 80px 20px;
+    padding: 64px 20px 42px;
   }
 
   .multi-cards__heading {
-    margin-bottom: 42px;
-    font-size: 36px;
+    max-width: 300px;
+    margin-bottom: 49px;
+    font-size: 21px !important;
+    line-height: 1.08;
   }
 
   .multi-cards__grid {
     grid-template-columns: 1fr;
+    width: 90vw;
     max-width: 430px;
     margin: 0 auto;
+    gap: 16px;
   }
 
   .multi-cards__card {
-    min-height: 520px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.8 / 1;
+    border-radius: 5px;
+  }
+
+  .multi-cards__card--newsletter,
+  .multi-cards__card--calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .multi-cards__image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .multi-cards__card--newsletter .multi-cards__image {
+    grid-column: 1;
+    object-position: 34% center;
+  }
+
+  .multi-cards__newsletter-content {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgb(12, 80, 69);
+    padding: 0 clamp(16px, 5vw, 30px);
+    text-align: left;
+  }
+
+  .multi-cards__newsletter-title {
+    margin: 0 0 clamp(10px, 3vw, 16px);
+    color: #ffffff;
+    font-size: clamp(18px, 5vw, 28px);
+    line-height: 0.92;
+  }
+
+  .multi-cards__newsletter-form {
+    align-items: flex-start;
+    gap: clamp(10px, 3vw, 15px);
+  }
+
+  .multi-cards__newsletter-input {
+    width: 100%;
+    max-width: 154px;
+    height: clamp(24px, 7vw, 38px);
+    min-height: clamp(24px, 7vw, 38px);
+    border-radius: 3px !important;
+    font-size: clamp(11px, 3vw, 15px);
+    font-weight: 700;
+    padding: 0 8px 0 15%;
+  }
+
+  .multi-cards__newsletter-button,
+  .multi-cards__calculator-button {
+    min-height: clamp(22px, 6vw, 32px);
+    height: clamp(22px, 6vw, 32px);
+    font-size: clamp(7px, 2.2vw, 11px);
+    line-height: 1.1;
+  }
+
+  .multi-cards__newsletter-button {
+    min-width: clamp(75px, 24vw, 115px);
+    background: #ff4500;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .multi-cards__button-text--desktop {
+    display: none;
+  }
+
+  .multi-cards__button-text--mobile {
+    display: inline;
+  }
+
+  .multi-cards__card--brand {
+    height: auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    padding: 0 clamp(24px, 8vw, 46px);
+  }
+
+  .multi-cards__mark {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: clamp(72px, 22vw, 104px);
+    height: clamp(72px, 22vw, 104px);
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .multi-cards__brand-title {
+    grid-column: 2;
+    max-width: 170px;
+    color: #ffffff;
+    font-size: clamp(18px, 5vw, 27px);
+    line-height: 0.88;
+  }
+
+  .multi-cards__card--calculator .multi-cards__image {
+    grid-column: 2;
+    object-position: center center;
+  }
+
+  .multi-cards__calculator-panel {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 0;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: clamp(28px, 8vw, 42px) clamp(18px, 6vw, 34px) 0;
+    background: #fdf9eb;
+  }
+
+  .multi-cards__calculator-title {
+    margin: 0 0 clamp(13px, 4vw, 20px);
+    color: rgb(94, 31, 62);
+    font-size: clamp(18px, 5vw, 28px);
+    line-height: 0.9;
+    text-align: left;
+  }
+
+  .multi-cards__calculator-button {
+    min-width: clamp(97px, 30vw, 145px);
+    padding: 0 clamp(12px, 4vw, 20px);
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.18);
   }
 }

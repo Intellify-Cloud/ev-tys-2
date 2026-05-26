@@ -457,6 +457,7 @@ multi_cards:
     input_label: "Email"
     input_placeholder: "email"
     button_text: "Sign up"
+    mobile_button_text: "Call me back"
     image: "/assets/img/sections/newsletter-couple.jpg"
     image_alt: "Smiling couple"
   brand:

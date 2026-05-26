@@ -24,7 +24,8 @@
               type="email"
               placeholder="{{ section.newsletter.input_placeholder }}">
             <button class="multi-cards__newsletter-button" type="submit">
-              {{ section.newsletter.button_text }}
+              <span class="multi-cards__button-text multi-cards__button-text--desktop">{{ section.newsletter.button_text }}</span>
+              <span class="multi-cards__button-text multi-cards__button-text--mobile">{{ section.newsletter.mobile_button_text | default: section.newsletter.button_text }}</span>
             </button>
           </form>
         </div>
