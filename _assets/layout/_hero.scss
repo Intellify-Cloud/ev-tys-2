@@ -213,6 +213,7 @@ header.hero {
       &::after {
         background-image: url("/assets/img/hero/hero-mobile.png") !important;
         background-position: center center !important;
+        object-position: center center !important;
         background-size: cover !important;
       }
 
@@ -229,6 +230,7 @@ header.hero {
 
     .hero-container {
       background-position: center center;
+      object-position: center center;
     }
 
     [data-purpose="site-navigation"] [data-purpose="logo"] img {
