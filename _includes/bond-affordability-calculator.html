@@ -20,7 +20,7 @@
 .mb-calc-header__eyebrow {
   margin-bottom: 10px;
   color: #e8522a;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -29,7 +29,7 @@
 .mb-calc-header__title {
   margin: 0 0 14px;
   color: #0c5045;
-  font-size: 54px;
+  font-size: 56px;
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: 0;
@@ -44,7 +44,7 @@
   max-width: 690px;
   margin: 0 auto;
   color: #2c2c2c;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
 }
 
@@ -66,7 +66,7 @@
   background: transparent;
   color: #0c5045;
   padding: 0 26px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
@@ -125,7 +125,7 @@
 .mb-calc-field__label {
   margin: 0;
   color: #0c5045;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.25;
 }
@@ -150,6 +150,20 @@
   box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.14);
 }
 
+.mb-calc-section input:focus,
+.mb-calc-section select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mb-calc-section button:focus {
+  outline: none !important;
+}
+
+.mb-calc-section button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.28);
+}
+
 .mb-calc-field--readonly .mb-calc-field__input-wrap {
   background: #edf5f1;
 }
@@ -158,7 +172,7 @@
 .mb-calc-field__suffix {
   flex-shrink: 0;
   color: #e8522a;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 900;
 }
 
@@ -178,7 +192,7 @@
   outline: 0;
   background: transparent;
   color: #2c2c2c;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -234,7 +248,7 @@
 
 .mb-calc-field__slider-ticks span {
   color: #5f726b;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -250,7 +264,7 @@
   background: #0c5045;
   color: #ffffff;
   padding: 0 30px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 12px 20px rgba(12, 80, 69, 0.22);
@@ -281,7 +295,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   padding: 6px 14px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -290,7 +304,7 @@
 .mb-calc-result__terms {
   margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -308,20 +322,20 @@
 
 .mb-calc-result-item__label {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .mb-calc-result-item__value {
   display: block;
   color: #ffffff;
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 900;
   line-height: 1.05;
 }
 
 .mb-calc-result-item__value--sm {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 800;
   text-align: right;
 }
@@ -343,16 +357,20 @@
   color: #2c2c2c;
 }
 
+.mb-calc-info[hidden] {
+  display: none;
+}
+
 .mb-calc-info h3 {
   margin: 0 0 10px;
   color: #0c5045;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 900;
 }
 
 .mb-calc-info p {
   margin: 0 0 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -366,11 +384,11 @@
   }
 
   .mb-calc-header__title {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .mb-calc-header__sub {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .mb-calc-tabs {
@@ -381,7 +399,7 @@
   .mb-calc-tabs__btn {
     flex: 1;
     padding: 0 12px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .mb-calc {
@@ -402,11 +420,11 @@
   }
 
   .mb-calc-result-item__value {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .mb-calc-result-item__value--sm {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 </style>
@@ -415,7 +433,7 @@
   <div class="mb-calc-page">
     <header class="mb-calc-header">
       <div class="mb-calc-header__eyebrow">Calculators</div>
-      <h2 class="mb-calc-header__title">Bond Calculator</h2>
+      <h2 class="mb-calc-header__title">Bond Calculators</h2>
       <p class="mb-calc-header__sub">
         Banks usually check both the 30% gross income cap and your net surplus income, then use the lower monthly repayment to estimate what you may qualify for.
       </p>
@@ -528,7 +546,7 @@
             <label class="mb-calc-field__label" for="mb-a-surplus">Net surplus income</label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-a-surplus" placeholder="Auto-calculated" readonly tabindex="-1">
+              <input class="mb-calc-field__input" type="text" id="mb-a-surplus" placeholder="Auto-calculated" readonly tabindex="-1">
             </div>
           </div>
 
@@ -583,7 +601,14 @@
       </div>
     </section>
 
-    <div class="mb-calc-info">
+    <div class="mb-calc-info" data-mb-info="repayment">
+      <h3>How bond repayments are worked out</h3>
+      <p><strong>Loan amount:</strong> your bond amount is calculated from the purchase price less your deposit.</p>
+      <p><strong>Monthly repayment:</strong> the calculator applies the interest rate and selected repayment term to estimate your monthly instalment.</p>
+      <p><strong>Total repayable:</strong> the full repayment estimate includes the original loan amount plus interest over the selected term. This excludes transfer fees, bond registration fees, rates, levies, and insurance.</p>
+    </div>
+
+    <div class="mb-calc-info" data-mb-info="affordability" hidden>
       <h3>How affordability is worked out</h3>
       <p><strong>Filter 1:</strong> monthly bond repayments are typically capped at 30% of gross monthly income.</p>
       <p><strong>Filter 2:</strong> banks also check your net surplus income after total monthly expenses are deducted from net monthly income. Current rent should generally be excluded if it stops after you move.</p>
@@ -607,7 +632,11 @@
     }
 
     function fmt(amount) {
-      return 'R ' + Math.round(Math.max(amount, 0)).toLocaleString('en-ZA');
+      return 'R ' + Math.round(Math.max(amount, 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function fmtNumber(amount) {
+      return Math.round(Math.max(amount, 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     }
 
     function pmt(rate, periods, principal) {
@@ -632,6 +661,10 @@
 
         root.querySelectorAll('.mb-calc-panel').forEach(function (panel) {
           panel.classList.toggle('mb-calc-panel--active', panel.id === 'mb-tab-' + button.dataset.mbTab);
+        });
+
+        root.querySelectorAll('[data-mb-info]').forEach(function (info) {
+          info.hidden = info.dataset.mbInfo !== button.dataset.mbTab;
         });
       });
     });
@@ -668,7 +701,7 @@
 
     function syncSurplus() {
       const surplus = calculateNetSurplus();
-      byId('mb-a-surplus').value = surplus > 0 ? Math.round(surplus) : '';
+      byId('mb-a-surplus').value = surplus > 0 ? fmtNumber(surplus) : '';
       return surplus;
     }
 
