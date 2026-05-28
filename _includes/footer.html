@@ -78,14 +78,11 @@
     </div>
 
     <div class="footer__row footer__row--bottom">
-      <div class="footer__column footer__column--copyright">
+      <div class="footer__bottom-bar">
         <p class="footer__copyright">{{ site.data.sitetext.footer.copyright }}</p>
-      </div>
-
-      <div class="footer__column footer__column--policies">
         {% for link in site.data.sitetext.footer.policy_links %}
-          <a href="{{ site.baseurl }}{{ link.url }}" class="footer__policy-link">{{ link.policy | default: link.tcs }}</a>
-          {% unless forloop.last %}<span class="footer__divider">/</span>{% endunless %}
+          <span class="footer__bottom-separator" aria-hidden="true">|</span>
+          <a href="{{ site.baseurl }}{{ link.url }}" class="footer__policy-link">{{ link.title }}</a>
         {% endfor %}
       </div>
     </div>
@@ -163,15 +160,12 @@
 
     <div class="footer-mobile__row footer-mobile__row--policies">
       <div class="footer-mobile__policy-group">
+        <p class="footer-mobile__copyright">{{ site.data.sitetext.footer.copyright }}</p>
         {% for link in site.data.sitetext.footer.policy_links %}
-          <a href="{{ site.baseurl }}{{ link.url }}" class="footer-mobile__policy-link">{{ link.policy | default: link.tcs }}</a>
-          {% unless forloop.last %}<span class="footer-mobile__divider">/</span>{% endunless %}
+          <span class="footer-mobile__divider" aria-hidden="true">|</span>
+          <a href="{{ site.baseurl }}{{ link.url }}" class="footer-mobile__policy-link">{{ link.title }}</a>
         {% endfor %}
       </div>
-    </div>
-
-    <div class="footer-mobile__row footer-mobile__row--copyright">
-      <p class="footer-mobile__copyright">{{ site.data.sitetext.footer.copyright }}</p>
     </div>
   </div>
 </footer>

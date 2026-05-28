@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Transfer Cost Calculator
+description: Estimate South African property transfer costs, bond registration fees, and upfront cash needed when buying a home.
 background: white
 hide_contact_strip: true
 hide_page_nav: true

@@ -41,7 +41,7 @@ Text centered, small, light color
 
 ## ROW 4 - ONE COLUMN
 
-| COPYRIGHT © 2026 Mzansi Bonds (Pty) LTD. |
+| COPYRIGHT © 2026 Mzansi Bonds |
 
 Text centered, small, light color
 Sit directly below Row 3

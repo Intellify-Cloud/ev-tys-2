@@ -1,0 +1,14 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% assign production_url = "https://www.mzansibonds.co.za" %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}
+  {% unless page.noindex or page.url contains '/404.html' or page.url contains '.xml' or page.url contains '.txt' %}
+  <url>
+    <loc>{{ production_url }}{{ page.url | replace:'index.html','' }}</loc>
+  </url>
+  {% endunless %}
+{% endfor %}
+</urlset>

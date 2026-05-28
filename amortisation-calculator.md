@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Extra Repayment Calculator
+title: Amortisation Calculator
+description: View an estimated home loan amortisation schedule and understand how monthly bond repayments reduce your loan over time.
 background: white
 ---
 

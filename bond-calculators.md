@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Bond Calculators
+description: Use Mzansi Bonds calculators to estimate bond repayments and affordability in South Africa using income, expenses, interest rate, and repayment term.
+permalink: /bond-calculators
 background: white
 hide_contact_strip: true
 hide_page_nav: true

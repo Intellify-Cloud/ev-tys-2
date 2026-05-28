@@ -22,7 +22,7 @@ exclude: [node_modules, webpack-config.js, package.json, package-lock.json, desi
 
 group: Mzansi Bonds
 
-company: Mzansi Bonds (Pty) LTD.
+company: Mzansi Bonds
 
 contact:
   phone: "082 770 4275"

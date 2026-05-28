@@ -14,29 +14,37 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="{{ site.title }}">
-  <meta name="description" content="{{ site.description }}">
+  {% assign seo_title = page.seo_title | default: page.title | default: site.title %}
+  {% assign seo_description = page.description | default: site.description %}
+  {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
+  {% assign social_image = "/social_916x509.jpg" | absolute_url %}
+
+  <meta name="title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="description" content="{{ seo_description }}">
+  {% if page.noindex %}
+  <meta name="robots" content="noindex, follow">
+  {% endif %}
   <!-- Primary Meta Tags -->
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.baseurl }}">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.baseurl }}/social_916x509.jpg">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ seo_description }}">
+  <meta property="og:image" content="{{ social_image }}">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ site.baseurl }}">
-  <meta property="twitter:title" content="{{ site.title }}">
-  <meta property="twitter:description" content="{{ site.description }}">
-  <meta property="twitter:image" content="{{ site.baseurl }}/social_916x509.jpg">
+  <meta property="twitter:url" content="{{ canonical_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{{ seo_description }}">
+  <meta property="twitter:image" content="{{ social_image }}">
 
 
   <meta name="author" content="{{ site.author }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ canonical_url }}">
 
-  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ seo_title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png">
   <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}">
@@ -100,6 +108,29 @@
 
   <script src="{{ site.baseurl | append: "/assets/bundle.js" | relative_url }}"></script>
   <script lang="js">var baseurl = "{{ "" | relative_url }}";</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Mzansi Bonds",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.logo.path | absolute_url }}",
+    "description": "{{ site.description }}",
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.contact.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.address }}",
+      "addressCountry": "ZA"
+    },
+    "sameAs": [
+      "https://www.instagram.com/mzansibonds/",
+      "https://www.facebook.com/people/Mzansi-Bonds/61589108114812/",
+      "https://www.linkedin.com/in/chris-tyson-mzansibonds/"
+    ]
+  }
+  </script>
 
   <!-- Page container change top padding when nav shrinks -->
   {% if page.layout == "page" %}

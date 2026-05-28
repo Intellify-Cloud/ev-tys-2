@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Bond Calculators
+description: This page has moved to the Mzansi Bonds bond calculators page.
 hide_contact_strip: true
 hide_page_nav: true
 permalink: /affordability-calculator
+noindex: true
 ---
 
 <script>

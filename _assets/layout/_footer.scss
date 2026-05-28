@@ -35,9 +35,7 @@
 }
 
 .footer__row--bottom {
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  width: 100%;
 }
 
 .footer__column {
@@ -60,21 +58,20 @@
   text-align: center;
 }
 
-.footer__column--copyright {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.footer__column--policies {
+.footer__bottom-bar {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__bottom-separator {
+  color: rgba(253, 249, 233, 0.4);
+  flex-shrink: 0;
+  user-select: none;
 }
 
 .footer__logo-wrapper {
@@ -235,12 +232,6 @@
   }
 }
 
-.footer__divider {
-  color: rgba(253, 249, 233, 0.5);
-  margin: 0 4px;
-  flex-shrink: 0;
-}
-
 .footer-credit {
    min-height: 22px;
    display: flex;
@@ -390,6 +381,7 @@
     color: #FDF9E9;
     font-size: 13px;
     line-height: 1.5;
+    user-select: none;
   }
 
   .footer-mobile__link,
@@ -436,12 +428,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+    gap: 6px;
+    flex-wrap: wrap;
   }
 
   .footer-mobile__policy-link {
     white-space: nowrap;
+  }
+
+  .footer-mobile__copyright {
+    margin: 0;
   }
 
   .footer-mobile__contact-text {
@@ -468,12 +464,13 @@
   }
 
   .footer__row--bottom {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    width: 100%;
   }
 
-  .footer__column--policies {
-    justify-content: flex-start;
+  .footer__bottom-bar {
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
   }
 
   .footer__column-title {
@@ -515,7 +512,7 @@
   .footer-mobile__contact-text,
   .footer-mobile__policy-link,
   .footer-mobile__copyright,
-    .footer-mobile__divider {
+  .footer-mobile__divider {
     font-size: 12px;
   }
 
@@ -523,14 +520,20 @@
     font-size: 18px;
   }
 
-  .footer__row--main,
-  .footer__row--bottom {
+  .footer__row--main {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding-bottom: 24px;
   }
 
-  .footer__row--main {
-    padding-bottom: 24px;
+  .footer__row--bottom {
+    width: 100%;
+  }
+
+  .footer__bottom-bar {
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
   }
 
   .footer__column-title,
@@ -549,10 +552,6 @@
     width: 40px;
     height: 40px;
     font-size: 16px;
-  }
-
-  .footer__divider {
-    margin: 0 3px;
   }
 }
 

@@ -1,13 +1,31 @@
 ---
 layout: page
-title: Privacy Policy
+title: Legal
+description: Read the Mzansi Bonds legal notice covering site privacy, cookies, updates, and contact details.
+permalink: /legal
 background: grey
+hide_contact_strip: true
 ---
-<div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Privacy Policy</h2>
-</div>
 
-This Privacy Policy describes how your personal information is collected, used, and shared when you visit {{ site.title }} (the “Site”).
+<style>
+#pagecontainer {
+  width: 90vw;
+  max-width: 850px;
+  padding: 130px 0 80px;
+}
+
+@media (max-width: 991px) {
+  #pagecontainer {
+    width: 90vw;
+    max-width: 90vw;
+    padding-top: 110px;
+  }
+}
+</style>
+
+## Legal
+
+This Privacy Policy describes how your personal information is collected, used, and shared when you visit {{ site.title }} (the "Site").
 
 **PERSONAL INFORMATION WE COLLECT**
 
@@ -15,9 +33,9 @@ This Privacy Policy describes how your personal information is collected, used, 
 
 Automatically Collected (Google Analytics):
 
-When you visit the Site, we automatically receive information about your device from your browser, such as your IP address. As you browse the Site, we also collect information about how you interact with the Site. We refer to this automatically-collected information as “Device Information”.
+When you visit the Site, we automatically receive information about your device from your browser, such as your IP address. As you browse the Site, we also collect information about how you interact with the Site. We refer to this automatically-collected information as "Device Information".
 
-We collect Device Information using cookies. “Cookies” are data files that are placed on your device. For more information about cookies and how to disable them, visit http://www.allaboutcookies.org.
+We collect Device Information using cookies. "Cookies" are data files that are placed on your device. For more information about cookies and how to disable them, visit http://www.allaboutcookies.org.
 
 We do this using Google Analytics: <https://www.google.com/intl/en/policies/privacy/>.
 
