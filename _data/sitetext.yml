@@ -72,17 +72,11 @@ calculators:
   text: "Use our Home loan Calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be."
   section: calculators
   list:
-    - title: "Bond Calculator"
+    - title: "Bond Calculators"
       desc: "Calculate the home loan you qualify for."
       icon: fas fa-calculator
       link:
         url: /affordability-calculator
-        text: "Calculate"
-    - title: "Bond Repayment Calculator"
-      desc: "Calculate your monthly bond repayments."
-      icon: fas fa-calculator
-      link:
-        url: /bond-repayment-calculator
         text: "Calculate"
     - title: "Transfer Cost Calculator"
       desc: "Calculate your registration and transfer costs."
@@ -401,13 +395,13 @@ footer:
       url: "/"
     - title: "Get started"
       url: "/#get-started"
+    - title: "About us"
+      url: "/about"
     - title: "Contact"
       url: "/contact"
   resources_title: "Resources"
   resources:
-    - title: "Bond Repayment Calculator"
-      url: "/bond-repayment-calculator"
-    - title: "Affordability Calculator"
+    - title: "Bond Calculators"
       url: "/affordability-calculator"
     - title: "Transfer Cost Calculator"
       url: "/transfer-cost-calculator"

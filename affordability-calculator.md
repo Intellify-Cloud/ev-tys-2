@@ -1,18 +1,16 @@
 ---
 layout: page
-title: Bond Affordability Calculator
+title: Bond Calculators
 background: white
 hide_contact_strip: true
 hide_page_nav: true
 ---
 
 <style>
-/* === Affordability Calculator Page Styles === */
-
-/* --- Section 1: Hero Banner --- */
 #pagecontainer {
   padding-top: 0;
 }
+
 .hero-banner {
   position: relative;
   width: 100vw;
@@ -21,12 +19,14 @@ hide_page_nav: true
   margin-left: calc(-50vw + 50%);
   margin-top: 0;
 }
+
 .hero-banner [data-purpose="site-navigation"] {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
+
 .hero-banner img {
   width: 100%;
   height: 100%;
@@ -34,6 +34,7 @@ hide_page_nav: true
   object-position: center top;
   display: block;
 }
+
 .hero-heading {
   position: absolute;
   bottom: 24px;
@@ -43,7 +44,6 @@ hide_page_nav: true
   max-width: 800px;
 }
 
-/* --- Section 2: Calculator --- */
 .calculator-section {
   background: #ffffff;
   padding: 60px 80px;
@@ -51,21 +51,25 @@ hide_page_nav: true
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .calculator-wrapper {
   max-width: 860px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
 }
+
 .calculator-wrapper iframe {
   width: 100%;
   height: 420px;
   border: 0;
   display: block;
 }
+
 .afford-calc {
   min-height: 110vh;
 }
+
 .btn-prequalify {
   background: #e8522a;
   color: white;
@@ -80,16 +84,25 @@ hide_page_nav: true
   transition: background 0.3s ease, transform 0.2s ease;
   text-decoration: none;
 }
+
 .btn-prequalify:hover {
   background: #d04422;
   transform: translateY(-2px);
   color: white;
   text-decoration: none;
 }
-/* --- Responsive (768px breakpoint) --- */
+
 @media (max-width: 768px) {
-  .hero-banner { height: 350px; overflow: hidden; }
-  .hero-banner img { height: 100%; object-fit: cover; }
+  .hero-banner {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .hero-banner img {
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero-heading {
     top: 61.8%;
     left: 50%;
@@ -99,14 +112,27 @@ hide_page_nav: true
     text-align: center;
     transform: translate(-50%, calc(-50% + 50px));
   }
-  .hero-banner [data-purpose="cta-button-header"] { display: none; }
+
+  .hero-banner [data-purpose="cta-button-header"] {
+    display: none;
+  }
+
   .hero-banner [data-purpose="mobile-menu-toggle"] {
     transform: scale(1.15);
     transform-origin: center;
   }
-  .calculator-section { padding: 32px 16px; }
-  .calculator-wrapper iframe { height: 560px; }
-  .afford-calc { min-height: 132vh; }
+
+  .calculator-section {
+    padding: 32px 16px;
+  }
+
+  .calculator-wrapper iframe {
+    height: 560px;
+  }
+
+  .afford-calc {
+    min-height: 132vh;
+  }
 }
 
 @media (min-width: 769px) {
@@ -114,17 +140,21 @@ hide_page_nav: true
     padding-left: 0;
     padding-right: 0;
   }
+
   .hero-banner [data-purpose="site-navigation"] > div {
     max-width: none;
     padding-left: 300px;
     padding-right: 230px;
   }
+
   .hero-banner [data-purpose="site-navigation"] [data-purpose="logo"] img {
     height: 83px;
   }
+
   .hero-banner [data-purpose="cta-button-header"] {
     transform: translateX(-70px);
   }
+
   .hero-heading {
     top: 285px;
     bottom: auto;
@@ -136,9 +166,6 @@ hide_page_nav: true
 }
 </style>
 
-<!-- ============================================ -->
-<!-- Section 1: Hero Banner                       -->
-<!-- ============================================ -->
 <div class="hero-banner">
   {% include nav.html variant="hero" %}
   <img src="/assets/img/hero/bond-calculator-hero.png" alt="Happy family in front of their new home" loading="lazy">
@@ -149,17 +176,18 @@ hide_page_nav: true
   </h1>
 </div>
 
-<!-- ============================================ -->
-<!-- Section 2: Bond Affordability Calculator     -->
-<!-- ============================================ -->
+{% comment %}
 <div class="calculator-section">
   <div class="calculator-wrapper">
     <iframe class="afford-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/affordability-calculator?iframe=true&iftype=evogroup"
-        title="Bond Affordability Calculator"></iframe>
+      src="https://www.ooba.co.za/calculators/affordability-calculator?iframe=true&iftype=evogroup"
+      title="Bond Calculators"></iframe>
   </div>
 
-   <a href="/contact" class="btn-prequalify">Get pre-qualified now.</a>
+  <a href="/contact" class="btn-prequalify">Get pre-qualified now.</a>
 </div>
+{% endcomment %}
+
+{% include bond-affordability-calculator.html %}
 
 {% include 2-card-calc-section.html %}

@@ -1,0 +1,702 @@
+<style>
+.mb-calc-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: #ffffff;
+}
+
+.mb-calc-page {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.mb-calc-header {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.mb-calc-header__eyebrow {
+  margin-bottom: 10px;
+  color: #e8522a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mb-calc-header__title {
+  margin: 0 0 14px;
+  color: #0c5045;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.mb-calc-header__title em {
+  color: #5e1f3e;
+  font-style: normal;
+}
+
+.mb-calc-header__sub {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.mb-calc-tabs {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 28px;
+  padding: 5px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(12, 80, 69, 0.12);
+}
+
+.mb-calc-tabs__btn {
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #0c5045;
+  padding: 0 26px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mb-calc-tabs__btn:hover:not(.mb-calc-tabs__btn--active) {
+  background: #fdf9eb;
+}
+
+.mb-calc-tabs__btn--active {
+  background: #ff4500;
+  color: #ffffff;
+}
+
+.mb-calc-panel {
+  display: none;
+}
+
+.mb-calc-panel--active {
+  display: block;
+}
+
+.mb-calc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mb-calc__fields,
+.mb-calc-result__inner,
+.mb-calc-info {
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(12, 80, 69, 0.12);
+}
+
+.mb-calc__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 34px;
+  background: #cbe4d7;
+}
+
+.mb-calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mb-calc-field--full {
+  grid-column: 1 / -1;
+}
+
+.mb-calc-field__label {
+  margin: 0;
+  color: #0c5045;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mb-calc-field__req {
+  color: #e8522a;
+}
+
+.mb-calc-field__input-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  overflow: hidden;
+  border: 2px solid #d6e8e0;
+  border-radius: 8px;
+  background: #fdf9eb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mb-calc-field__input-wrap:focus-within {
+  border-color: #ff4500;
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.14);
+}
+
+.mb-calc-field--readonly .mb-calc-field__input-wrap {
+  background: #edf5f1;
+}
+
+.mb-calc-field__prefix,
+.mb-calc-field__suffix {
+  flex-shrink: 0;
+  color: #e8522a;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.mb-calc-field__prefix {
+  padding: 0 9px 0 16px;
+}
+
+.mb-calc-field__suffix {
+  padding: 0 16px 0 8px;
+}
+
+.mb-calc-field__input,
+.mb-calc-field__select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #2c2c2c;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mb-calc-field__input {
+  padding: 13px 16px 13px 0;
+}
+
+.mb-calc-field__input--no-prefix {
+  padding-left: 16px;
+}
+
+.mb-calc-field__input::placeholder {
+  color: #7f9f92;
+}
+
+.mb-calc-field__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mb-calc-field__input[type=number]::-webkit-outer-spin-button,
+.mb-calc-field__input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mb-calc-field__select {
+  appearance: none;
+  cursor: pointer;
+  padding: 13px 42px 13px 16px;
+  background-image: linear-gradient(45deg, transparent 50%, #e8522a 50%), linear-gradient(135deg, #e8522a 50%, transparent 50%);
+  background-position: calc(100% - 22px) 21px, calc(100% - 15px) 21px;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+}
+
+.mb-calc-field__slider-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.mb-calc-field__slider {
+  width: 100%;
+  accent-color: #ff4500;
+}
+
+.mb-calc-field__slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mb-calc-field__slider-ticks span {
+  color: #5f726b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mb-calc-field__slider-ticks span.active {
+  color: #ff4500;
+}
+
+.mb-calc-btn {
+  grid-column: 1 / -1;
+  min-height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: #0c5045;
+  color: #ffffff;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(12, 80, 69, 0.22);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.mb-calc-btn:hover {
+  background: #063d34;
+  transform: translateY(-1px);
+}
+
+.mb-calc-result {
+  position: sticky;
+  top: 24px;
+}
+
+.mb-calc-result__inner {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 32px;
+  background: #e8522a;
+  color: #ffffff;
+}
+
+.mb-calc-result__tag {
+  display: inline-flex;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mb-calc-result__terms {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.mb-calc-result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.mb-calc-result-item--hero {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mb-calc-result-item__label {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mb-calc-result-item__value {
+  display: block;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.mb-calc-result-item__value--sm {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.mb-calc-result-item__value--accent {
+  color: #fdf9eb;
+}
+
+.mb-calc-result-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.mb-calc-info {
+  margin-top: 24px;
+  padding: 24px;
+  background: #ffffff;
+  color: #2c2c2c;
+}
+
+.mb-calc-info h3 {
+  margin: 0 0 10px;
+  color: #0c5045;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.mb-calc-info p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mb-calc-info strong {
+  color: #5e1f3e;
+}
+
+@media (max-width: 768px) {
+  .mb-calc-section {
+    padding: 48px 16px 56px;
+  }
+
+  .mb-calc-header__title {
+    font-size: 34px;
+  }
+
+  .mb-calc-header__sub {
+    font-size: 15px;
+  }
+
+  .mb-calc-tabs {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .mb-calc-tabs__btn {
+    flex: 1;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .mb-calc {
+    grid-template-columns: 1fr;
+  }
+
+  .mb-calc__fields {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .mb-calc-result {
+    position: static;
+  }
+
+  .mb-calc-result__inner {
+    padding: 24px;
+  }
+
+  .mb-calc-result-item__value {
+    font-size: 34px;
+  }
+
+  .mb-calc-result-item__value--sm {
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="mb-calc-section" id="mzansi-bond-calculator">
+  <div class="mb-calc-page">
+    <header class="mb-calc-header">
+      <div class="mb-calc-header__eyebrow">Calculators</div>
+      <h2 class="mb-calc-header__title">Bond Calculator</h2>
+      <p class="mb-calc-header__sub">
+        Banks usually check both the 30% gross income cap and your net surplus income, then use the lower monthly repayment to estimate what you may qualify for.
+      </p>
+    </header>
+
+    <div class="mb-calc-tabs" role="tablist" aria-label="Bond calculator options">
+      <button class="mb-calc-tabs__btn mb-calc-tabs__btn--active" type="button" role="tab" aria-selected="true" aria-controls="mb-tab-repayment" data-mb-tab="repayment">Bond Repayment</button>
+      <button class="mb-calc-tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="mb-tab-affordability" data-mb-tab="affordability">Affordability</button>
+    </div>
+
+    <section class="mb-calc-panel mb-calc-panel--active" id="mb-tab-repayment" role="tabpanel">
+      <div class="mb-calc">
+        <div class="mb-calc__fields">
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-r-price">Purchase price <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-r-price" placeholder="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-r-deposit">Deposit</label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-r-deposit" placeholder="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-r-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-r-rate" value="11.25" min="0" max="30" step="0.25">
+              <span class="mb-calc-field__suffix">%</span>
+            </div>
+          </div>
+
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-r-years">Loan term <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__slider-wrap">
+              <input class="mb-calc-field__slider" type="range" id="mb-r-years" min="5" max="30" step="5" value="20">
+              <div class="mb-calc-field__slider-ticks" data-mb-repayment-ticks>
+                <span>5 yrs</span>
+                <span>10 yrs</span>
+                <span>15 yrs</span>
+                <span>20 yrs</span>
+                <span>25 yrs</span>
+                <span>30 yrs</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="mb-calc-btn" type="button" id="mb-r-calc-btn">Calculate repayment</button>
+        </div>
+
+        <aside class="mb-calc-result" aria-live="polite">
+          <div class="mb-calc-result__inner">
+            <div class="mb-calc-result__tag">Results</div>
+            <div class="mb-calc-result-item mb-calc-result-item--hero">
+              <span class="mb-calc-result-item__label">Monthly repayment</span>
+              <span class="mb-calc-result-item__value" id="mb-r-monthly">R 0</span>
+            </div>
+            <div class="mb-calc-result-divider"></div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Loan amount</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-r-principal">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Total repayable</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-r-total">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Total interest</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm mb-calc-result-item__value--accent" id="mb-r-interest">R 0</span>
+            </div>
+            <p class="mb-calc-result__terms">This is an estimate only. Final affordability and bond approval are subject to bank assessment.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mb-calc-panel" id="mb-tab-affordability" role="tabpanel">
+      <div class="mb-calc">
+        <div class="mb-calc__fields">
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-a-gross">Gross monthly income <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-a-gross" placeholder="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-net">Net monthly income <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-a-net" placeholder="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-expenses">Total monthly expenses <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-a-expenses" placeholder="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="mb-calc-field mb-calc-field--full mb-calc-field--readonly">
+            <label class="mb-calc-field__label" for="mb-a-surplus">Net surplus income</label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="number" id="mb-a-surplus" placeholder="Auto-calculated" readonly tabindex="-1">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-years">Years to repay <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <select class="mb-calc-field__select" id="mb-a-years">
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="15">15 years</option>
+                <option value="20" selected>20 years</option>
+                <option value="25">25 years</option>
+                <option value="30">30 years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-rate">Interest Rate <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-a-rate" value="10.25" min="0" max="30" step="0.25">
+              <span class="mb-calc-field__suffix">%</span>
+            </div>
+          </div>
+
+          <button class="mb-calc-btn" type="button" id="mb-a-calc-btn">Check affordability</button>
+        </div>
+
+        <aside class="mb-calc-result" aria-live="polite">
+          <div class="mb-calc-result__inner">
+            <div class="mb-calc-result__tag">NCA estimate</div>
+            <div class="mb-calc-result-item mb-calc-result-item--hero">
+              <span class="mb-calc-result-item__label">You may qualify for</span>
+              <span class="mb-calc-result-item__value" id="mb-a-qualify">R 0</span>
+            </div>
+            <div class="mb-calc-result-divider"></div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">30% gross cap</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-gross-cap">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Net surplus income</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-surplus-result">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Max monthly instalment</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-monthly">R 0</span>
+            </div>
+            <p class="mb-calc-result__terms">This excludes transfer fees, bond registration costs, rates, levies, insurance, and bank stress testing.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="mb-calc-info">
+      <h3>How affordability is worked out</h3>
+      <p><strong>Filter 1:</strong> monthly bond repayments are typically capped at 30% of gross monthly income.</p>
+      <p><strong>Filter 2:</strong> banks also check your net surplus income after total monthly expenses are deducted from net monthly income. Current rent should generally be excluded if it stops after you move.</p>
+      <p><strong>The lower figure wins:</strong> this maximum monthly instalment is converted into an estimated bond amount using the standard amortization formula. Banks may also stress test your budget at a higher interest rate.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const root = document.getElementById('mzansi-bond-calculator');
+    if (!root) return;
+
+    function byId(id) {
+      return document.getElementById(id);
+    }
+
+    function value(id) {
+      const field = byId(id);
+      return field ? parseFloat(field.value) || 0 : 0;
+    }
+
+    function fmt(amount) {
+      return 'R ' + Math.round(Math.max(amount, 0)).toLocaleString('en-ZA');
+    }
+
+    function pmt(rate, periods, principal) {
+      if (periods <= 0) return 0;
+      if (rate === 0) return principal / periods;
+      return principal * (rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
+    }
+
+    function pvFromPmt(rate, periods, monthly) {
+      if (periods <= 0) return 0;
+      if (rate === 0) return monthly * periods;
+      return (monthly / rate) * (1 - 1 / Math.pow(1 + rate, periods));
+    }
+
+    root.querySelectorAll('[data-mb-tab]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        root.querySelectorAll('[data-mb-tab]').forEach(function (tabButton) {
+          const isActive = tabButton === button;
+          tabButton.classList.toggle('mb-calc-tabs__btn--active', isActive);
+          tabButton.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        root.querySelectorAll('.mb-calc-panel').forEach(function (panel) {
+          panel.classList.toggle('mb-calc-panel--active', panel.id === 'mb-tab-' + button.dataset.mbTab);
+        });
+      });
+    });
+
+    function syncRepaymentTicks() {
+      const years = parseInt(byId('mb-r-years').value, 10);
+      const activeIndex = (years - 5) / 5;
+      root.querySelectorAll('[data-mb-repayment-ticks] span').forEach(function (tick, index) {
+        tick.classList.toggle('active', index === activeIndex);
+      });
+    }
+
+    function calculateRepayment() {
+      const price = value('mb-r-price');
+      const deposit = value('mb-r-deposit');
+      const annualRate = value('mb-r-rate');
+      const years = parseInt(byId('mb-r-years').value, 10) || 20;
+      const principal = Math.max(price - deposit, 0);
+      const periods = years * 12;
+      const monthlyRate = annualRate / 100 / 12;
+      const monthly = principal > 0 ? pmt(monthlyRate, periods, principal) : 0;
+      const total = monthly * periods;
+      const interest = Math.max(total - principal, 0);
+
+      byId('mb-r-monthly').textContent = fmt(monthly);
+      byId('mb-r-principal').textContent = fmt(principal);
+      byId('mb-r-total').textContent = fmt(total);
+      byId('mb-r-interest').textContent = fmt(interest);
+    }
+
+    function calculateNetSurplus() {
+      return Math.max(value('mb-a-net') - value('mb-a-expenses'), 0);
+    }
+
+    function syncSurplus() {
+      const surplus = calculateNetSurplus();
+      byId('mb-a-surplus').value = surplus > 0 ? Math.round(surplus) : '';
+      return surplus;
+    }
+
+    function calculateAffordability() {
+      const gross = value('mb-a-gross');
+      const annualRate = value('mb-a-rate');
+      const years = parseInt(byId('mb-a-years').value, 10) || 20;
+      const grossCap = gross * 0.3;
+      const surplus = syncSurplus();
+      const maxMonthly = Math.min(grossCap, surplus);
+      const periods = years * 12;
+      const monthlyRate = annualRate / 100 / 12;
+      const qualify = maxMonthly > 0 ? pvFromPmt(monthlyRate, periods, maxMonthly) : 0;
+
+      byId('mb-a-qualify').textContent = fmt(qualify);
+      byId('mb-a-gross-cap').textContent = fmt(grossCap);
+      byId('mb-a-surplus-result').textContent = fmt(surplus);
+      byId('mb-a-monthly').textContent = fmt(maxMonthly);
+    }
+
+    byId('mb-r-years').addEventListener('input', syncRepaymentTicks);
+    byId('mb-r-calc-btn').addEventListener('click', calculateRepayment);
+    byId('mb-a-calc-btn').addEventListener('click', calculateAffordability);
+    ['mb-a-net', 'mb-a-expenses'].forEach(function (id) {
+      byId(id).addEventListener('input', syncSurplus);
+    });
+
+    syncRepaymentTicks();
+    syncSurplus();
+  })();
+</script>
