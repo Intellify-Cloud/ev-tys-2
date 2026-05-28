@@ -107,8 +107,8 @@ hide_page_nav: true
   {% include nav.html variant="hero" %}
   <div class="about-hero__inner">
     <div class="about-hero__content">
-      <div class="about-hero__tagline">About Mzansi Bonds</div>
-      <h1 class="about-hero__title">OWN YOUR DREAM</h1>
+      <h3 class="about-hero__tagline">About Mzansi Bonds</h3>
+      <h2 class="about-hero__title">OWN YOUR DREAM</h2>
       <p class="about-hero__copy">
         Mzansi Bonds empowers South Africans to take ownership of their future through property.
         We guide people through the bond process with clarity, simplify what can feel complex, and
