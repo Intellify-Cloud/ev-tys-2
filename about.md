@@ -52,33 +52,33 @@ hide_page_nav: true
 }
 
 .about-hero__content {
-  max-width: 940px;
+  max-width: 900px;
   text-align: center;
 }
 
 .about-hero__title {
-  margin: 0 0 32px;
+  margin: 0 0 28px;
   color: #1a4a3a;
-  font-size: clamp(64px, 9vw, 118px);
+  font-size: clamp(56px, 7vw, 78px);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
 .about-hero__copy {
   margin: 0 auto;
   color: rgb(94, 32, 63);
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 1.48;
+  line-height: 1.5;
 }
 
 .about-hero__tagline {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #e8522a;
-  font-size: 15px;
+  font-size: 25.92px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -93,12 +93,16 @@ hide_page_nav: true
   }
 
   .about-hero__title {
-    font-size: 54px;
+    font-size: 48px;
   }
 
   .about-hero__copy {
-    font-size: 20px;
-    line-height: 1.45;
+    font-size: 19px;
+    line-height: 1.48;
+  }
+
+  .about-hero__tagline {
+    font-size: 21.6px;
   }
 }
 </style>
