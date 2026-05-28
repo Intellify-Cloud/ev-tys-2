@@ -354,7 +354,7 @@
   margin-top: 24px;
   padding: 24px;
   background: #ffffff;
-  color: #2c2c2c;
+  color: rgb(94, 32, 63);
 }
 
 .mb-calc-info[hidden] {
@@ -363,19 +363,22 @@
 
 .mb-calc-info h3 {
   margin: 0 0 10px;
-  color: #0c5045;
+  color: rgb(94, 32, 63);
   font-size: 24px;
   font-weight: 900;
 }
 
 .mb-calc-info p {
   margin: 0 0 12px;
+  color: rgb(94, 32, 63);
   font-size: 16px;
   line-height: 1.6;
 }
 
+.mb-calc-info p,
+.mb-calc-info p strong,
 .mb-calc-info strong {
-  color: #5e1f3e;
+  color: rgb(94, 32, 63);
 }
 
 @media (max-width: 768px) {
@@ -451,7 +454,7 @@
             <label class="mb-calc-field__label" for="mb-r-price">Purchase price <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-r-price" placeholder="0" min="0" step="1000">
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-r-price" placeholder="0" data-currency-input>
             </div>
           </div>
 
@@ -459,14 +462,14 @@
             <label class="mb-calc-field__label" for="mb-r-deposit">Deposit</label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-r-deposit" placeholder="0" min="0" step="1000">
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-r-deposit" placeholder="0" data-currency-input>
             </div>
           </div>
 
           <div class="mb-calc-field">
             <label class="mb-calc-field__label" for="mb-r-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
-              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-r-rate" value="11.25" min="0" max="30" step="0.25">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-r-rate" value="10.5" min="0" max="30" step="0.25">
               <span class="mb-calc-field__suffix">%</span>
             </div>
           </div>
@@ -522,7 +525,7 @@
             <label class="mb-calc-field__label" for="mb-a-gross">Gross monthly income <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-a-gross" placeholder="0" min="0" step="1000">
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-gross" placeholder="0" data-currency-input>
             </div>
           </div>
 
@@ -530,7 +533,7 @@
             <label class="mb-calc-field__label" for="mb-a-net">Net monthly income <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-a-net" placeholder="0" min="0" step="1000">
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-net" placeholder="0" data-currency-input>
             </div>
           </div>
 
@@ -538,7 +541,7 @@
             <label class="mb-calc-field__label" for="mb-a-expenses">Total monthly expenses <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
               <span class="mb-calc-field__prefix">R</span>
-              <input class="mb-calc-field__input" type="number" id="mb-a-expenses" placeholder="0" min="0" step="1000">
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-expenses" placeholder="0" data-currency-input>
             </div>
           </div>
 
@@ -567,7 +570,7 @@
           <div class="mb-calc-field">
             <label class="mb-calc-field__label" for="mb-a-rate">Interest Rate <span class="mb-calc-field__req">*</span></label>
             <div class="mb-calc-field__input-wrap">
-              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-a-rate" value="10.25" min="0" max="30" step="0.25">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-a-rate" value="10.5" min="0" max="30" step="0.25">
               <span class="mb-calc-field__suffix">%</span>
             </div>
           </div>
@@ -628,7 +631,7 @@
 
     function value(id) {
       const field = byId(id);
-      return field ? parseFloat(field.value) || 0 : 0;
+      return field ? parseFloat(String(field.value).replace(/\s/g, '')) || 0 : 0;
     }
 
     function fmt(amount) {
@@ -637,6 +640,11 @@
 
     function fmtNumber(amount) {
       return Math.round(Math.max(amount, 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function formatCurrencyField(field) {
+      const numericValue = field.value.replace(/[^\d]/g, '');
+      field.value = numericValue ? numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : '';
     }
 
     function pmt(rate, periods, principal) {
@@ -725,6 +733,14 @@
     byId('mb-r-years').addEventListener('input', syncRepaymentTicks);
     byId('mb-r-calc-btn').addEventListener('click', calculateRepayment);
     byId('mb-a-calc-btn').addEventListener('click', calculateAffordability);
+    root.querySelectorAll('[data-currency-input]').forEach(function (field) {
+      field.addEventListener('input', function () {
+        formatCurrencyField(field);
+      });
+      field.addEventListener('blur', function () {
+        formatCurrencyField(field);
+      });
+    });
     ['mb-a-net', 'mb-a-expenses'].forEach(function (id) {
       byId(id).addEventListener('input', syncSurplus);
     });

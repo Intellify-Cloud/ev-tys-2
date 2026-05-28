@@ -52,16 +52,16 @@ hide_page_nav: true
 }
 
 .about-hero__content {
-  max-width: 860px;
+  max-width: 940px;
   text-align: center;
 }
 
 .about-hero__title {
-  margin: 0 0 28px;
+  margin: 0 0 32px;
   color: #1a4a3a;
-  font-size: 58px;
-  font-weight: 800;
-  line-height: 1.1;
+  font-size: clamp(64px, 9vw, 118px);
+  font-weight: 900;
+  line-height: 0.9;
   letter-spacing: 0;
 }
 
@@ -74,11 +74,12 @@ hide_page_nav: true
 }
 
 .about-hero__tagline {
-  margin-top: 36px;
+  margin-bottom: 14px;
   color: #e8522a;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -92,7 +93,7 @@ hide_page_nav: true
   }
 
   .about-hero__title {
-    font-size: 36px;
+    font-size: 54px;
   }
 
   .about-hero__copy {
@@ -106,13 +107,13 @@ hide_page_nav: true
   {% include nav.html variant="hero" %}
   <div class="about-hero__inner">
     <div class="about-hero__content">
-      <h1 class="about-hero__title">About Mzansi Bonds</h1>
+      <div class="about-hero__tagline">About Mzansi Bonds</div>
+      <h1 class="about-hero__title">OWN YOUR DREAM</h1>
       <p class="about-hero__copy">
         Mzansi Bonds empowers South Africans to take ownership of their future through property.
         We guide people through the bond process with clarity, simplify what can feel complex, and
         secure the very best deals from the banks - fast tracking your journey to property ownership.
       </p>
-      <div class="about-hero__tagline">OWN YOUR DREAM</div>
     </div>
   </div>
 </section>
