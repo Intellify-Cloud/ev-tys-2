@@ -76,7 +76,7 @@ calculators:
       desc: "Calculate the home loan you qualify for."
       icon: fas fa-calculator
       link:
-        url: /affordability-calculator
+        url: /bond-calculators
         text: "Calculate"
     - title: "Transfer Cost Calculator"
       desc: "Calculate your registration and transfer costs."
@@ -402,7 +402,7 @@ footer:
   resources_title: "Resources"
   resources:
     - title: "Bond Calculators"
-      url: "/affordability-calculator"
+      url: "/bond-calculators"
     - title: "Transfer Cost Calculator"
       url: "/transfer-cost-calculator"
   contact_title: "Get in touch"
@@ -458,6 +458,6 @@ multi_cards:
   calculator:
     title: "Find out what<br>you can afford."
     button_text: "Use our<br>Calculator"
-    button_link: "/affordability-calculator"
+    button_link: "/bond-calculators"
     image: "/assets/img/sections/calculator.jpg"
     image_alt: "Family sitting in their new home"
