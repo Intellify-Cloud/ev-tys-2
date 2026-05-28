@@ -67,7 +67,7 @@ hide_page_nav: true
 
 .about-hero__copy {
   margin: 0 auto;
-  color: #2c2c2c;
+  color: rgb(94, 32, 63);
   font-size: 25px;
   font-weight: 600;
   line-height: 1.48;
