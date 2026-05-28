@@ -17,7 +17,7 @@
         {% endif %}
         <div class="d-flex gap-3">
           {% for social in featured.social %}
-          <a href="{{ social.url }}" class="bg-mzansi-orange text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity" aria-label="{{ social.icon }}">
+          <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="bg-mzansi-orange text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity" aria-label="{{ social.icon }}">
             <i class="{{ social.icon }}"></i>
           </a>
           {% endfor %}
@@ -51,7 +51,7 @@
           <p class="text-xs uppercase tracking-widest text-muted">{{ person.role }}</p>
           <div class="d-flex gap-2 justify-content-center mt-3">
             {% for social in person.social %}
-            <a href="{{ social.url }}" class="bg-mzansi-purple text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-mzansi-orange transition-colors" aria-label="{{ social.icon }}">
+            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="bg-mzansi-purple text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-mzansi-orange transition-colors" aria-label="{{ social.icon }}">
               <i class="{{ social.icon }}"></i>
             </a>
             {% endfor %}

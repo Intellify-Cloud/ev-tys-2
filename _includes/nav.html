@@ -13,7 +13,7 @@
       <a
         class="hidden md:block bg-[#FF4500] text-white px-[43px] py-[14px] rounded-full font-bold text-[20.7px] hover:bg-orange-600 transition-colors"
         data-purpose="cta-button-header"
-        href="{{ site.baseurl }}/#get-started">
+        href="{{ site.baseurl }}/#as-easy-as">
         {{ site.data.sitetext.hero.button }}
       </a>
 
@@ -21,6 +21,7 @@
         aria-label="Menu"
         class="flex flex-col justify-center items-end group"
         data-purpose="mobile-menu-toggle"
+        hidden
         type="button">
         <span class="menu-line w-8"></span>
         <span class="menu-line w-8"></span>
@@ -62,7 +63,7 @@
     </nav>
 
     <!-- Mobile menu button -->
-    <button class="md:hidden text-mzansi-text" aria-label="Menu">
+    <button class="md:hidden text-mzansi-text" aria-label="Menu" hidden>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
