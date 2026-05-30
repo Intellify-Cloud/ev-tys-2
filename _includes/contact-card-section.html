@@ -1,4 +1,5 @@
 {% assign card = site.data.sitetext.contact_card_section %}
+{% assign whatsapp_text = site.contact.whatsapp_message | url_encode %}
 
 <style>
 .contact-card-section__button--call {
@@ -31,7 +32,7 @@
         <h2 class="contact-card-section__title">{{ card.title }}</h2>
         <p class="contact-card-section__text">{{ card.text }}</p>
         <div class="contact-card-section__actions">
-          <a class="contact-card-section__button contact-card-section__button--call" href="{{ card.call_link }}">
+          <a class="contact-card-section__button contact-card-section__button--call" href="https://wa.me/{{ site.contact.whatsapp }}?text={{ whatsapp_text }}" target="_blank" rel="noopener noreferrer">
             {{ card.call_text }}
           </a>
           <a class="contact-card-section__button contact-card-section__button--email" href="{{ card.email_link }}">
