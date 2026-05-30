@@ -119,14 +119,14 @@ two_card_calc_section:
       image_alt: "Speak to an expert"
       title: "Speak to<br>an expert"
       description: "Our experts are<br>available to speak<br>to you"
-      button_text: "Call me back"
+      button_text: "Call Now"
       button_type: phone
       button_link: ""
     - theme: orange
       image: /assets/img/sections/image-right.jpg
       image_alt: "Home loans pre-approval"
-      title: "Home<br>Loans"
-      description: "Pre-approval and<br>bonds."
+      title: "Home Loans"
+      description: "Pre-approval and bonds."
       button_text: "Apply now!"
       button_type: link
       button_link: "/contact"

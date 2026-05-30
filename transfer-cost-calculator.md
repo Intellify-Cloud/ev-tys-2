@@ -40,7 +40,7 @@ hide_page_nav: true
 }
 .hero-heading {
   position: absolute;
-  bottom: 24px;
+  bottom: 10%;
   left: 32px;
   color: rgb(12, 80, 69);
   letter-spacing: 0;
@@ -84,12 +84,11 @@ hide_page_nav: true
     transform: translateX(-70px);
   }
   .hero-heading {
-    top: 285px;
-    bottom: auto;
+    bottom: 10%;
     left: 230px;
     width: 800px;
     max-width: calc(100vw - 460px);
-    font-size: 80px !important;
+    font-size: 76px !important;
   }
 }
 </style>

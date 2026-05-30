@@ -14,8 +14,73 @@ hide_contact_strip: true
   padding: 130px 0 80px;
 }
 
-#pagecontainer, #pagecontainer h1, #pagecontainer h2, #pagecontainer h3, #pagecontainer h4 {
+#pagecontainer,
+#pagecontainer h1,
+#pagecontainer h2,
+#pagecontainer h3,
+#pagecontainer h4,
+#pagecontainer p,
+#pagecontainer li,
+#pagecontainer strong {
   color: #5c1f3c;
+}
+
+#pagecontainer h1,
+#pagecontainer h2,
+#pagecontainer h3,
+#pagecontainer h4 {
+  line-height: 1.2;
+  margin-top: 1.45em;
+  margin-bottom: 0.55em;
+}
+
+#pagecontainer h1 {
+  font-size: 42px;
+  margin-top: 0;
+}
+
+#pagecontainer h2 {
+  font-size: 34px;
+}
+
+#pagecontainer h3 {
+  font-size: 24px;
+}
+
+#pagecontainer h4 {
+  font-size: 20px;
+}
+
+#pagecontainer p,
+#pagecontainer li {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+#pagecontainer p {
+  margin-bottom: 1rem;
+}
+
+#pagecontainer ul,
+#pagecontainer ol {
+  margin: 0 0 1.25rem 1.35rem;
+  padding-left: 1rem;
+}
+
+#pagecontainer li {
+  margin-bottom: 0.45rem;
+}
+
+#pagecontainer hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid rgba(92, 31, 60, 0.18);
+}
+
+#pagecontainer a {
+  color: #5c1f3c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 991px) {
@@ -24,10 +89,26 @@ hide_contact_strip: true
     max-width: 90vw;
     padding-top: 110px;
   }
+
+  #pagecontainer h1 {
+    font-size: 34px;
+  }
+
+  #pagecontainer h2 {
+    font-size: 28px;
+  }
+
+  #pagecontainer h3 {
+    font-size: 22px;
+  }
+
+  #pagecontainer h4 {
+    font-size: 18px;
+  }
 }
 </style>
 
-## Legal
+# Legal
 
 This Privacy Policy describes how your personal information is collected, used, and shared when you visit **{{ site.company }}** (the "Site").
 
