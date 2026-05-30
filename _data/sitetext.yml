@@ -82,7 +82,7 @@ calculators:
       desc: "Calculate your registration and transfer costs."
       icon: fas fa-calculator
       link:
-        url: /transfer-cost-calculator
+        url: /transfer-cost-calculator/
         text: "Calculate"
 
 more-calculators:
@@ -404,7 +404,7 @@ footer:
     - title: "Bond Calculators"
       url: "/bond-calculators"
     - title: "Transfer Cost Calculator"
-      url: "/transfer-cost-calculator"
+      url: "/transfer-cost-calculator/"
   contact_title: "Get in touch"
   contact_info:
     - type: "email"

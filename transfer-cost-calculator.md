@@ -2,6 +2,7 @@
 layout: page
 title: Transfer Cost Calculator
 description: Estimate South African property transfer costs, bond registration fees, and upfront cash needed when buying a home.
+permalink: /transfer-cost-calculator/
 background: white
 hide_contact_strip: true
 hide_page_nav: true
@@ -46,61 +47,6 @@ hide_page_nav: true
   max-width: 800px;
 }
 
-/* --- Section 2: Calculator --- */
-.calculator-section {
-  background: #ffffff;
-  padding: 60px 80px;
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.calculator-section h2 {
-  color: #1a4a3a;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-.calculator-subtext {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  max-width: 560px;
-  margin: 0 auto 32px;
-  line-height: 1.6;
-}
-.calculator-wrapper {
-  max-width: 860px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.calculator-wrapper iframe {
-  width: 100%;
-  height: 420px;
-  border: 0;
-  display: block;
-}
-.transfer-calc {
-  min-height: 175vh;
-}
-.btn-prequalify {
-  background: #e8522a;
-  color: white;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 32px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 32px;
-  cursor: pointer;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
-}
-.btn-prequalify:hover {
-  background: #d04422;
-  transform: translateY(-2px);
-  color: white;
-  text-decoration: none;
-}
 /* --- Responsive (768px breakpoint) --- */
 @media (max-width: 768px) {
   .hero-banner { height: 350px; overflow: hidden; }
@@ -119,9 +65,6 @@ hide_page_nav: true
     transform: scale(1.15);
     transform-origin: center;
   }
-  .calculator-section { padding: 32px 16px; }
-  .calculator-wrapper iframe { height: 560px; }
-  .transfer-calc { min-height: 340vh; }
 }
 
 @media (min-width: 769px) {
@@ -164,17 +107,6 @@ hide_page_nav: true
   </h1>
 </div>
 
-<!-- ============================================ -->
-<!-- Section 2: Transfer Cost Calculator          -->
-<!-- ============================================ -->
-<div class="calculator-section">
-  <div class="calculator-wrapper">
-    <iframe class="transfer-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/bond-and-transfer-costs-calculator?iframe=true&iftype=evogroup"
-        title="Transfer Cost Calculator"></iframe>
-  </div>
-
-  <a href="/pre-qualify" class="btn-prequalify">Get pre-qualified now.</a>
-</div>
+{% include transfer-cost-calculator.html %}
 
 {% include 2-card-calc-section.html %}
