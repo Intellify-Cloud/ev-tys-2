@@ -1,5 +1,5 @@
 header:
-  title: "mzansi bonds Finance"
+  title: "mzansi bonds"
   text: "We take the stress out of the process. Your application goes to multiple banks simultaneously — including your own — so they compete for your business and you walk away with the best rate on the table. Real savings, real peace of mind. And because we're paid by the banks on registration, our service is completely free to you."
   highlights:
     - title: "Bond Origination"
@@ -129,7 +129,7 @@ two_card_calc_section:
       description: "Pre-approval and<br>bonds."
       button_text: "Apply now!"
       button_type: link
-      button_link: "/"
+      button_link: "/contact"
 
 textblock:
   title: "The Process"
@@ -244,7 +244,7 @@ as_easy_as:
   section: as-easy-as
   title: "As easy as..."
   step_1_title: "Step 1"
-  step_1_description: "Let us pre-qualify you."
+  step_1_description: "Let us pre-qualify you"
   step_1_icon: "fas fa-clipboard-check"
   step_2_title: "Step 2"
   step_2_description: "You find your dream home"

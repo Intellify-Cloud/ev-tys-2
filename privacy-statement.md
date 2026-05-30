@@ -14,6 +14,10 @@ hide_contact_strip: true
   padding: 130px 0 80px;
 }
 
+#pagecontainer, #pagecontainer h1, #pagecontainer h2, #pagecontainer h3, #pagecontainer h4 {
+  color: #5c1f3c;
+}
+
 @media (max-width: 991px) {
   #pagecontainer {
     width: 90vw;
