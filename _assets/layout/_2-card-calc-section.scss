@@ -111,6 +111,10 @@
   color: #1a4a3a;
 }
 
+.two-card-calc-section__button--mobile-call {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .two-card-calc-section {
     padding: 32px 16px;
@@ -165,6 +169,14 @@
   .two-card-calc-section__button {
     min-height: 39px;
     font-size: calc(0.9625rem + 4px);
+  }
+
+  .two-card-calc-section__button--mobile-call {
+    display: inline-block;
+  }
+
+  .two-card-calc-section__button--desktop-whatsapp {
+    display: none;
   }
 }
 

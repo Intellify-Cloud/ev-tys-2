@@ -117,8 +117,8 @@ two_card_calc_section:
     - theme: purple
       image: /assets/img/sections/image-left.jpg
       image_alt: "Speak to an expert"
-      title: "Speak to<br>an expert"
-      description: "Our experts are<br>available to speak<br>to you"
+      title: "Speak to an expert"
+      description: "Our experts are available to speak to you"
       button_text: "Call Now"
       button_type: phone
       button_link: ""

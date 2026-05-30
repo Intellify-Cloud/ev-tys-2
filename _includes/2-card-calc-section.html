@@ -27,7 +27,11 @@
 
           {% if card.button_type == 'phone' %}
             {% assign phone_href = site.contact.phone | replace: ' ', '' %}
-            <a href="tel:{{ phone_href }}" class="two-card-calc-section__button two-card-calc-section__button--orange">
+            {% assign whatsapp_text = site.contact.whatsapp_message | url_encode %}
+            <a href="tel:{{ phone_href }}" class="two-card-calc-section__button two-card-calc-section__button--orange two-card-calc-section__button--mobile-call">
+              {{ card.button_text }}
+            </a>
+            <a href="https://wa.me/{{ site.contact.whatsapp }}?text={{ whatsapp_text }}" class="two-card-calc-section__button two-card-calc-section__button--orange two-card-calc-section__button--desktop-whatsapp" target="_blank" rel="noopener noreferrer">
               {{ card.button_text }}
             </a>
           {% else %}
