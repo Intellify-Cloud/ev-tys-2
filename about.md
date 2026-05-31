@@ -2,7 +2,7 @@
 layout: page
 title: About Mzansi Bonds
 description: Learn how Mzansi Bonds helps South Africans take ownership of their future through property with clear bond guidance and better bank deals.
-permalink: /about
+permalink: /about/
 hide_contact_strip: true
 hide_page_nav: true
 ---

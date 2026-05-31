@@ -2,7 +2,7 @@
 layout: page
 title: Legal
 description: Read the Mzansi Bonds legal notice covering site privacy, cookies, updates, and contact details.
-permalink: /legal
+permalink: /legal/
 background: grey
 hide_contact_strip: true
 ---

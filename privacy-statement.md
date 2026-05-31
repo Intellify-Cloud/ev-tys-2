@@ -2,7 +2,7 @@
 layout: page
 title: Privacy Policy
 description: Read the Mzansi Bonds privacy statement and learn how we collect, use, share, and protect personal information in line with POPIA.
-permalink: /privacy-statement
+permalink: /privacy-statement/
 background: grey
 hide_contact_strip: true
 ---

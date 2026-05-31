@@ -2,6 +2,7 @@
 layout: page
 title: Extra Repayment Calculator
 description: Estimate how extra monthly payments could reduce your South African home loan balance, interest costs, and repayment term.
+permalink: /additional-payment-calculator/
 background: white
 ---
 

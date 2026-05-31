@@ -2,6 +2,7 @@
 layout: page
 title: Deposit Savings Calculator
 description: Calculate how long it may take to save for a home loan deposit based on your target amount, savings, and monthly contributions.
+permalink: /deposit-savings-calculator/
 background: white
 ---
 

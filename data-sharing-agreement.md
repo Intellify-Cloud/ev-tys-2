@@ -2,7 +2,7 @@
 layout: page
 title: Data Sharing Agreement
 description: Read the Mzansi Bonds data sharing agreement for business partners and how third-party personal information is handled under POPIA.
-permalink: /data-sharing-agreement
+permalink: /data-sharing-agreement/
 background: grey
 hide_contact_strip: true
 ---

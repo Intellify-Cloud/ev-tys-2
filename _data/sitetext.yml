@@ -11,7 +11,7 @@ header:
 
 hero:
   eyebrow: "Secure the best bond deals."
-  headline: "Own your dream."
+  headline: "Own Your Dream"
   body1: "Take ownership of your future through property."
   body2: "We simplify the bond process and secure the best deals from the banks."
   button: "Get Started"
@@ -47,19 +47,19 @@ services:
       desc: "Contact us before you start looking at properties. With our streamlined pre-approval process, we will give you advice around your qualifying and affordability range, as well as on improving your credit and affordability profiles."
       icon: fas fa-tasks
       link:
-        url: /contact
+        url: /contact/
         text: "Contact Bond Studio"
     - title: "Bond Origination"
       desc: "We work hard on negotiating the best possible terms and interest rates for all our clients. Complete our easy Home Loan application form, and we will ensure that all your documentation is correct to be submitted to all the banks. We liaise with all the major banks (including your own bank) to guarantee you the best interest rates and deal on your Home Loan. "
       icon: fas fas fa-home
       link:
-        url: /contact
+        url: /contact/
         text: "mzansi bonds Finance"
     - title: "Insurance"
       desc: "We offer competitive insurance products including Building Insurance and Mortgage Protection, bringing all your home loan options under one roof."
       icon: fas fa-shield-alt
       link:
-        url: /contact
+        url: /contact/
         text: "mzansi bonds Finance"
 
 articles:
@@ -76,7 +76,7 @@ calculators:
       desc: "Calculate the home loan you qualify for."
       icon: fas fa-calculator
       link:
-        url: /bond-calculators
+        url: /bond-calculators/
         text: "Calculate"
     - title: "Transfer Cost Calculator"
       desc: "Calculate your registration and transfer costs."
@@ -94,20 +94,20 @@ more-calculators:
       desc: "Calculate how your repayment is structured."
       icon: fas fa-calculator
       link:
-        url: /amortisation-calculator
+        url: /amortisation-calculator/
         text: "Calculate"
 
     - title: "Deposit Savings Calculator"
       desc: "Calculate how much you need to save for your deposit."
       icon: fas fa-calculator
       link:
-        url: /deposit-savings-calculator
+        url: /deposit-savings-calculator/
         text: "Calculate"
     - title: "Additional Payment Calculator"
       desc: "Calculate your savings on your total home loan cost by paying a little extra into your bond."
       icon: fas fa-calculator
       link:
-        url: /additional-payment-calculator
+        url: /additional-payment-calculator/
         text: "Calculate"
 
 two_card_calc_section:
@@ -129,7 +129,7 @@ two_card_calc_section:
       description: "Pre-approval and bonds."
       button_text: "Apply now!"
       button_type: link
-      button_link: "/contact"
+      button_link: "/contact/"
 
 textblock:
   title: "The Process"
@@ -238,7 +238,7 @@ take_the_nextstep:
   heading_accent: "Let your next take you home."
   description: "Your next step might be moving in together, it might be moving to another city. It might be finding somewhere bigger for your growing family. Or it might be finding somewhere better suited to your stage of life. Whatever your next step is - it's the freedom to live life fully now."
   button_text: "Take your next step. Get pre-qualified now."
-  button_link: "/contact"
+  button_link: "/contact/"
 
 as_easy_as:
   section: as-easy-as
@@ -253,7 +253,7 @@ as_easy_as:
   step_3_description: "We make it happen!"
   step_3_icon: "fas fa-key"
   button_text: "Apply now"
-  button_link: "/contact"
+  button_link: "/contact/"
 
 lets_make_it_happen:
   section: lets-make-it-happen
@@ -394,15 +394,15 @@ footer:
     - title: "Home"
       url: "/"
     - title: "Get started"
-      url: "/contact"
+      url: "/contact/"
     - title: "About us"
-      url: "/about"
+      url: "/about/"
     - title: "Contact"
-      url: "/contact"
+      url: "/contact/"
   resources_title: "Resources"
   resources:
     - title: "Bond Calculators"
-      url: "/bond-calculators"
+      url: "/bond-calculators/"
     - title: "Transfer Cost Calculator"
       url: "/transfer-cost-calculator/"
   contact_title: "Get in touch"
@@ -426,11 +426,11 @@ footer:
       url: "https://www.linkedin.com/in/chris-tyson-mzansibonds/"
   policy_links:
     - title: "Privacy Policy"
-      url: "/privacy-statement"
+      url: "/privacy-statement/"
     - title: "T&C's"
-      url: "/legal"
+      url: "/legal/"
     - title: "Data Sharing Agreement"
-      url: "/data-sharing-agreement"
+      url: "/data-sharing-agreement/"
   legal: "Powered by evo Home Loans"
   design_credit: 'Website by <a href="https://www.intellify.co.za/" target="_blank" rel="noopener noreferrer" class="font-bold hover:text-mzansi-orange">Intellify</a>'
   social:
@@ -460,6 +460,6 @@ multi_cards:
   calculator:
     title: "Find out what<br>you can afford."
     button_text: "Use our<br>Calculator"
-    button_link: "/bond-calculators"
+    button_link: "/bond-calculators/"
     image: "/assets/img/sections/calculator.jpg"
     image_alt: "Family sitting in their new home"

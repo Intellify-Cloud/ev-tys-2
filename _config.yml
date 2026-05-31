@@ -19,6 +19,7 @@ logo:
   alt: Mzansi Bonds Logo
 
 exclude: [node_modules, webpack-config.js, package.json, package-lock.json, design]
+include: [.htaccess]
 
 group: Mzansi Bonds
 
