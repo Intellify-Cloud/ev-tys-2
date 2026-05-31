@@ -10,7 +10,6 @@
     </a>
 
     <div class="flex items-center space-x-6">
-      {% comment %}
       {% unless page.url contains '/contact' %}
         <a
           class="hidden md:block bg-[#FF4500] text-white px-[43px] py-[14px] rounded-full font-bold text-[20.7px] hover:bg-orange-600 transition-colors"
@@ -19,7 +18,6 @@
           {{ site.data.sitetext.hero.button }}
         </a>
       {% endunless %}
-      {% endcomment %}
 
       <button
         aria-label="Menu"

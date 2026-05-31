@@ -16,6 +16,7 @@
           loading="lazy">
         <div class="multi-cards__newsletter-content">
           <h3 class="multi-cards__newsletter-title">{{ section.newsletter.title }}</h3>
+          {% comment %}
           <form class="multi-cards__newsletter-form">
             <label class="sr-only" for="newsletter-email">{{ section.newsletter.input_label }}</label>
             <input
@@ -28,6 +29,7 @@
               <span class="multi-cards__button-text multi-cards__button-text--mobile">{{ section.newsletter.mobile_button_text | default: section.newsletter.button_text }}</span>
             </button>
           </form>
+          {% endcomment %}
         </div>
       </article>
 

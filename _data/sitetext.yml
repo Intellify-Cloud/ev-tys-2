@@ -447,7 +447,7 @@ multi_cards:
   background_image: "/assets/img/sections/contact-bg-1900.jpg"
   heading: "Empowering South Africans<br>through property ownership."
   newsletter:
-    title: "Sign up to our<br>newsletter."
+    title: "Newsletter<br>coming soon."
     input_label: "Email"
     input_placeholder: "email"
     button_text: "Sign up"
@@ -459,7 +459,7 @@ multi_cards:
     icon: "/assets/img/logo/m.png"
   calculator:
     title: "Find out what<br>you can afford."
-    button_text: "Use our<br>Calculator"
+    button_text: "Use our Calculator"
     button_link: "/bond-calculators/"
     image: "/assets/img/sections/calculator.jpg"
     image_alt: "Family sitting in their new home"
