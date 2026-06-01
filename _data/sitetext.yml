@@ -235,7 +235,7 @@ banking_partners:
 take_the_nextstep:
   section: take-the-nextstep
   heading_main: "Every step takes you somewhere."
-  heading_accent: "Let your next take you home."
+  heading_accent: "Let your next step take you home."
   description: "Your next step might be moving in together, it might be moving to another city. It might be finding somewhere bigger for your growing family. Or it might be finding somewhere better suited to your stage of life. Whatever your next step is - it's the freedom to live life fully now."
   button_text: "Take your next step. Get pre-qualified now."
   button_link: "/contact/"
