@@ -23,6 +23,13 @@ $name = trim((string)($payload['name'] ?? ''));
 $email = trim((string)($payload['email'] ?? ''));
 $phone = trim((string)($payload['phone'] ?? ''));
 $message = trim((string)($payload['message'] ?? ''));
+$type = trim((string)($payload['type'] ?? 'contact'));
+
+if ($type === 'newsletter') {
+    $name = 'Newsletter signup';
+    $phone = '';
+    $message = 'The user filled in the website newsletter form and would like to be added to the mailing list.';
+}
 
 if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(422);
@@ -54,9 +61,15 @@ $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 $safePhone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
 $safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
+$subject = $type === 'newsletter'
+    ? 'New Mzansi Bonds newsletter signup'
+    : 'New Mzansi Bonds website enquiry';
+$heading = $type === 'newsletter'
+    ? 'New Mzansi Bonds newsletter signup'
+    : 'New Mzansi Bonds website enquiry';
 
 $emailBody = <<<HTML
-<h2>New Mzansi Bonds website enquiry</h2>
+<h2>{$heading}</h2>
 <p><strong>Name:</strong> {$safeName}</p>
 <p><strong>Email:</strong> {$safeEmail}</p>
 <p><strong>Phone:</strong> {$safePhone}</p>
@@ -68,7 +81,7 @@ $resendPayload = [
     'from' => $from,
     'to' => [$to],
     'reply_to' => $email,
-    'subject' => 'New Mzansi Bonds website enquiry',
+    'subject' => $subject,
     'html' => $emailBody,
 ];
 

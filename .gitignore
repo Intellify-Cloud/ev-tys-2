@@ -3,6 +3,7 @@ node_modules
 .mcp.json
 .env
 .env.*
+_private/
 
 *.gem
 .bundle

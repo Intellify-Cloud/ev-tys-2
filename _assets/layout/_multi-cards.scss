@@ -58,32 +58,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 54px;
-  background: rgb(12, 80, 69);
+  justify-content: flex-start;
+  padding: 61px 39px 0;
+  background: transparent;
   text-align: center;
 }
 
 .multi-cards__card--newsletter .multi-cards__image {
-  display: none;
-}
-
-.multi-cards__newsletter-mark {
-  position: relative;
-  z-index: 2;
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  opacity: 1;
-  margin-bottom: 42px;
+  display: block;
+  object-position: center bottom;
 }
 
 .multi-cards__newsletter-title {
-  margin: 0;
-  color: #ffffff;
-  font-size: 58px;
+  margin: 0 0 32px;
+  color: #ff4500;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 1.03;
 }
 
 .multi-cards__newsletter-form {
@@ -99,23 +90,48 @@
   max-width: 350px;
   height: 70px;
   min-height: 70px;
-  border: 0;
+  border: 0 !important;
   border-radius: 5px !important;
   background: #efecdb !important;
   background-color: #efecdb !important;
   box-shadow: inset 0 0 0 1000px #efecdb;
   color: #807e7b;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: 800;
-  padding: 0 24px 0 15%;
-  outline: none;
+  padding: 0 24px 0 10px;
+  outline: 0 !important;
   appearance: none;
   -webkit-appearance: none;
+}
+
+.multi-cards__newsletter-input:focus,
+.multi-cards__newsletter-input:focus-visible {
+  border: 3px solid rgba(255, 69, 0, 0.65) !important;
+  outline: 0 !important;
+  box-shadow:
+    inset 0 0 0 1000px #efecdb,
+    0 0 0 4px rgba(255, 69, 0, 0.24);
 }
 
 .multi-cards__newsletter-input::placeholder {
   color: #807e7b;
   opacity: 1;
+}
+
+.multi-cards__newsletter-status {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  margin: -18px 0 -12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.multi-cards__newsletter-status--error {
+  color: #f7d4dc;
 }
 
 .multi-cards__newsletter-button,
@@ -137,15 +153,28 @@
 .multi-cards__newsletter-button {
   align-self: center;
   height: 72px;
-  min-width: 171px;
+  min-width: 172px;
   background: rgb(12, 80, 69);
   color: #ffffff;
+  font-size: 1.2rem;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
   cursor: pointer;
 }
 
+.multi-cards__newsletter-button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
 .multi-cards__newsletter-button:hover {
   color: #ffffff;
+}
+
+@media (min-width: 769px) {
+  .multi-cards__newsletter-input,
+  .multi-cards__newsletter-button {
+    font-size: 1.2rem !important;
+  }
 }
 
 .multi-cards__button-text--mobile {
@@ -274,6 +303,11 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .multi-cards__card--newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .multi-cards__image {
     position: relative;
     inset: auto;
@@ -283,33 +317,40 @@
   }
 
   .multi-cards__card--newsletter .multi-cards__image {
-    display: none;
+    position: relative;
+    inset: auto;
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
   }
 
   .multi-cards__newsletter-content {
     position: relative;
-    inset: auto;
+    grid-column: 2;
+    grid-row: 1;
     height: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: rgb(12, 80, 69);
-    padding: 0 clamp(16px, 5vw, 30px);
-    text-align: center;
+    padding: 0 clamp(18px, 6vw, 34px);
+    text-align: left;
   }
 
   .multi-cards__newsletter-mark {
-    display: block;
-    width: clamp(65px, 19.8vw, 94px);
-    height: clamp(65px, 19.8vw, 94px);
-    margin-bottom: clamp(10px, 3vw, 16px);
+    display: none;
   }
 
   .multi-cards__newsletter-title {
-    margin: 0;
+    width: 100%;
+    max-width: 170px;
+    margin: 0 0 clamp(13px, 4vw, 20px);
     color: #ffffff;
     font-size: clamp(18px, 5vw, 28px);
     line-height: 0.9;
+    text-align: left;
   }
 
   .multi-cards__newsletter-form {
@@ -319,13 +360,13 @@
 
   .multi-cards__newsletter-input {
     width: 100%;
-    max-width: 154px;
+    max-width: clamp(118px, 35vw, 154px);
     height: clamp(24px, 7vw, 38px);
     min-height: clamp(24px, 7vw, 38px);
     border-radius: 3px !important;
     font-size: clamp(11px, 3vw, 15px);
-    font-weight: 700;
-    padding: 0 8px 0 15%;
+    font-weight: 800;
+    padding: 0 8px 0 10px;
   }
 
   .multi-cards__newsletter-button,
@@ -337,7 +378,7 @@
   }
 
   .multi-cards__newsletter-button {
-    min-width: clamp(75px, 24vw, 115px);
+    min-width: clamp(97px, 30vw, 145px);
     background: #ff4500;
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.18);
   }
@@ -410,11 +451,5 @@
     min-width: clamp(97px, 30vw, 145px);
     padding: 0 clamp(12px, 4vw, 20px);
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.18);
-  }
-}
-
-@media (min-width: 769px) {
-  .multi-cards__card--newsletter .multi-cards__image {
-    display: none !important;
   }
 }

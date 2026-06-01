@@ -15,26 +15,27 @@
           alt="{{ section.newsletter.image_alt }}"
           loading="lazy">
         <div class="multi-cards__newsletter-content">
-          <img
-            class="multi-cards__newsletter-mark"
-            src="{{ site.baseurl }}{{ section.newsletter.icon }}"
-            alt=""
-            aria-hidden="true">
           <h3 class="multi-cards__newsletter-title">{{ section.newsletter.title }}</h3>
-          {% comment %}
-          <form class="multi-cards__newsletter-form">
+          <form class="multi-cards__newsletter-form" id="newsletterForm">
             <label class="sr-only" for="newsletter-email">{{ section.newsletter.input_label }}</label>
             <input
               id="newsletter-email"
+              name="email"
               class="multi-cards__newsletter-input"
               type="email"
-              placeholder="{{ section.newsletter.input_placeholder }}">
+              placeholder="{{ section.newsletter.input_placeholder }}"
+              required>
+            <p class="multi-cards__newsletter-status multi-cards__newsletter-status--success" id="newsletterSuccess" aria-live="polite">
+              {{ section.newsletter.success_message }}
+            </p>
+            <p class="multi-cards__newsletter-status multi-cards__newsletter-status--error" id="newsletterError" aria-live="polite">
+              {{ section.newsletter.error_message }}
+            </p>
             <button class="multi-cards__newsletter-button" type="submit">
               <span class="multi-cards__button-text multi-cards__button-text--desktop">{{ section.newsletter.button_text }}</span>
               <span class="multi-cards__button-text multi-cards__button-text--mobile">{{ section.newsletter.mobile_button_text | default: section.newsletter.button_text }}</span>
             </button>
           </form>
-          {% endcomment %}
         </div>
       </article>
 
@@ -64,3 +65,61 @@
   </div>
 </section>
 <!-- END: MultiCardsSection -->
+
+<script>
+  (function () {
+    'use strict';
+
+    const form = document.getElementById('newsletterForm');
+    if (!form) return;
+
+    const email = document.getElementById('newsletter-email');
+    const button = form.querySelector('button[type="submit"]');
+    const desktopText = button.querySelector('.multi-cards__button-text--desktop');
+    const mobileText = button.querySelector('.multi-cards__button-text--mobile');
+    const success = document.getElementById('newsletterSuccess');
+    const error = document.getElementById('newsletterError');
+    const defaultDesktopText = desktopText.textContent;
+    const defaultMobileText = mobileText.textContent;
+
+    function setButtonText(text) {
+      desktopText.textContent = text;
+      mobileText.textContent = text;
+    }
+
+    function resetButtonText() {
+      desktopText.textContent = defaultDesktopText;
+      mobileText.textContent = defaultMobileText;
+    }
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      success.style.display = 'none';
+      error.style.display = 'none';
+
+      button.disabled = true;
+      setButtonText('{{ section.newsletter.sending_text }}');
+
+      try {
+        const response = await fetch('{{ site.baseurl }}/secret-contact-send.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'newsletter',
+            email: email.value.trim()
+          })
+        });
+
+        if (!response.ok) throw new Error('Newsletter signup failed');
+
+        form.reset();
+        success.style.display = 'block';
+      } catch (newsletterError) {
+        error.style.display = 'block';
+      } finally {
+        button.disabled = false;
+        resetButtonText();
+      }
+    });
+  })();
+</script>

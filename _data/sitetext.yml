@@ -447,12 +447,14 @@ multi_cards:
   background_image: "/assets/img/sections/contact-bg-1900.jpg"
   heading: "Empowering South Africans<br>through property ownership."
   newsletter:
-    title: "Own<br>Your<br>Dream."
-    icon: "/assets/img/logo/m.png"
+    title: "Sign up to our<br>newsletter."
     input_label: "Email"
     input_placeholder: "email"
     button_text: "Sign up"
     mobile_button_text: "Call me back"
+    sending_text: "Sending..."
+    success_message: "Thanks, you're on the list."
+    error_message: "Something went wrong. Please try again."
     image: "/assets/img/sections/newsletter-couple.jpg"
     image_alt: "Smiling couple"
   brand:
