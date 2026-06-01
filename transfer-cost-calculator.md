@@ -50,15 +50,20 @@ hide_page_nav: true
 /* --- Responsive (768px breakpoint) --- */
 @media (max-width: 768px) {
   .hero-banner { height: 350px; overflow: hidden; }
-  .hero-banner img { height: 100%; object-fit: cover; }
+  .hero-banner > img { height: 100%; object-fit: cover; }
   .hero-heading {
-    top: 61.8%;
+    top: auto;
     left: 50%;
-    bottom: auto;
+    bottom: 6.18%;
     width: calc(100% - 32px);
     max-width: 414px;
     text-align: center;
-    transform: translate(-50%, calc(-50% + 50px));
+    transform: translateX(-50%);
+    font-size: 55px !important;
+    line-height: 1.05;
+  }
+  .hero-banner [data-purpose="logo"] img {
+    height: 52px;
   }
   .hero-banner [data-purpose="cta-button-header"] { display: none; }
   .hero-banner [data-purpose="mobile-menu-toggle"] {

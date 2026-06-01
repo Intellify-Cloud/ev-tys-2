@@ -447,7 +447,8 @@ multi_cards:
   background_image: "/assets/img/sections/contact-bg-1900.jpg"
   heading: "Empowering South Africans<br>through property ownership."
   newsletter:
-    title: "Newsletter<br>coming soon."
+    title: "Own<br>Your<br>Dream."
+    icon: "/assets/img/logo/m.png"
     input_label: "Email"
     input_placeholder: "email"
     button_text: "Sign up"

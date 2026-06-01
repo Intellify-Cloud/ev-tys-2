@@ -15,6 +15,11 @@
           alt="{{ section.newsletter.image_alt }}"
           loading="lazy">
         <div class="multi-cards__newsletter-content">
+          <img
+            class="multi-cards__newsletter-mark"
+            src="{{ site.baseurl }}{{ section.newsletter.icon }}"
+            alt=""
+            aria-hidden="true">
           <h3 class="multi-cards__newsletter-title">{{ section.newsletter.title }}</h3>
           {% comment %}
           <form class="multi-cards__newsletter-form">

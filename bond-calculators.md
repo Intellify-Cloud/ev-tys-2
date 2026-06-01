@@ -100,19 +100,25 @@ hide_page_nav: true
     overflow: hidden;
   }
 
-  .hero-banner img {
+  .hero-banner > img {
     height: 100%;
     object-fit: cover;
   }
 
   .hero-heading {
-    top: 61.8%;
+    top: auto;
     left: 50%;
-    bottom: auto;
+    bottom: 6.18%;
     width: calc(100% - 32px);
     max-width: 414px;
     text-align: center;
-    transform: translate(-50%, calc(-50% + 50px));
+    transform: translateX(-50%);
+    font-size: 55px !important;
+    line-height: 1.05;
+  }
+
+  .hero-banner [data-purpose="logo"] img {
+    height: 52px;
   }
 
   .hero-banner [data-purpose="cta-button-header"] {

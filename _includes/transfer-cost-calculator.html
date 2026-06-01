@@ -378,7 +378,7 @@
           <label class="mb-transfer-field__label" for="mb-t-purchase-price">Purchase price including VAT <span class="mb-transfer-field__req">*</span></label>
           <div class="mb-transfer-field__input-wrap">
             <span class="mb-transfer-field__prefix">R</span>
-            <input class="mb-transfer-field__input" type="number" id="mb-t-purchase-price" placeholder="0" min="0" step="1000">
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-purchase-price" placeholder="0" data-currency-input>
           </div>
         </div>
 
@@ -386,7 +386,7 @@
           <label class="mb-transfer-field__label" for="mb-t-loan-amount">Loan amount <span class="mb-transfer-field__req">*</span></label>
           <div class="mb-transfer-field__input-wrap">
             <span class="mb-transfer-field__prefix">R</span>
-            <input class="mb-transfer-field__input" type="number" id="mb-t-loan-amount" placeholder="0" min="0" step="1000">
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-loan-amount" placeholder="0" data-currency-input>
           </div>
         </div>
 
@@ -491,6 +491,11 @@
 (function () {
   const VAT = 0.15;
   const formatRand = value => "R " + Math.round(value).toLocaleString("en-ZA");
+  const parseCurrency = value => parseFloat(String(value || "").replace(/[^\d]/g, "")) || 0;
+  const formatCurrencyField = field => {
+    const numericValue = field.value.replace(/[^\d]/g, "");
+    field.value = numericValue ? numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, " ") : "";
+  };
   const setValue = (id, value) => {
     const node = document.getElementById(id);
     if (node) node.textContent = formatRand(value);
@@ -560,8 +565,8 @@
   }
 
   function calculateTransferCosts() {
-    const price = parseFloat(document.getElementById("mb-t-purchase-price").value) || 0;
-    const loan = parseFloat(document.getElementById("mb-t-loan-amount").value) || 0;
+    const price = parseCurrency(document.getElementById("mb-t-purchase-price").value);
+    const loan = parseCurrency(document.getElementById("mb-t-loan-amount").value);
     const sellerVat = document.getElementById("mb-t-seller-vat").value;
 
     const bondAttyInclVat = calcBondAttorneyFee(loan) * (1 + VAT);
@@ -593,6 +598,11 @@
       sellerVat === "yes" ? "Transfer duty not applicable for VAT vendor **" : "Transfer duty **";
     document.getElementById("mb-t-results-card").classList.add("mb-transfer-result--visible");
   }
+
+  document.querySelectorAll("#mzansi-transfer-cost-calculator [data-currency-input]").forEach(field => {
+    field.addEventListener("input", () => formatCurrencyField(field));
+    field.addEventListener("blur", () => formatCurrencyField(field));
+  });
 
   document.getElementById("mb-t-calc-btn").addEventListener("click", calculateTransferCosts);
 })();
