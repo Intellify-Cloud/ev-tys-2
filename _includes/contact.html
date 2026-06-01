@@ -151,12 +151,18 @@
       submitBtn.querySelector('span').textContent = '{{ site.data.sitetext.contact.form.sending_text }}';
 
       try {
+        const fullName = fields.firstName.value.trim() + ' ' + fields.lastName.value.trim();
         const body = {
-          name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
+          name: fullName,
           emailAddress: fields.emailAddress.value.trim(),
           phoneNumber: fields.phoneNumber.value.trim(),
           location: fields.location.value,
-          content: fields.content.value.trim()
+          content: fields.content.value.trim(),
+          fromName: 'Mzansi Bonds',
+          fromEmail: 'noreply@mzansibonds.co.za',
+          replyToName: fullName,
+          replyToEmail: fields.emailAddress.value.trim(),
+          subject: 'New Mzansi Bonds website enquiry'
         };
 
         const response = await fetch(API_URL + '/v1/messages', {

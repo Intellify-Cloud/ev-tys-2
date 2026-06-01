@@ -22,7 +22,7 @@
   <meta name="title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="description" content="{{ seo_description }}">
   {% if page.noindex %}
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="noindex,{% if page.nofollow %} nofollow{% else %} follow{% endif %}">
   {% endif %}
   <!-- Primary Meta Tags -->
 
