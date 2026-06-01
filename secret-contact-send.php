@@ -31,7 +31,7 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
 }
 
 $config = [];
-$configPath = dirname(__DIR__) . '/private/resend.php';
+$configPath = __DIR__ . '/_private/resend.php';
 if (is_readable($configPath)) {
     $loadedConfig = require $configPath;
     if (is_array($loadedConfig)) {
@@ -42,6 +42,7 @@ if (is_readable($configPath)) {
 $apiKey = getenv('RESEND_API_KEY') ?: (string)($config['api_key'] ?? '');
 $from = (string)($config['from'] ?? 'Mzansi Bonds <noreply@mzansibonds.co.za>');
 $to = (string)($config['to'] ?? 'hello@mzansibonds.co.za');
+$bcc = trim((string)($config['bcc'] ?? ''));
 
 if ($apiKey === '') {
     http_response_code(500);
@@ -55,7 +56,7 @@ $safePhone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
 $safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
 
 $emailBody = <<<HTML
-<h2>New secret contact form test</h2>
+<h2>New Mzansi Bonds website enquiry</h2>
 <p><strong>Name:</strong> {$safeName}</p>
 <p><strong>Email:</strong> {$safeEmail}</p>
 <p><strong>Phone:</strong> {$safePhone}</p>
@@ -67,9 +68,13 @@ $resendPayload = [
     'from' => $from,
     'to' => [$to],
     'reply_to' => $email,
-    'subject' => 'Secret contact form test',
+    'subject' => 'New Mzansi Bonds website enquiry',
     'html' => $emailBody,
 ];
+
+if ($bcc !== '') {
+    $resendPayload['bcc'] = [$bcc];
+}
 
 $ch = curl_init('https://api.resend.com/emails');
 curl_setopt_array($ch, [

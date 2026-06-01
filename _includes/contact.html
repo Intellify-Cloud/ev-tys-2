@@ -79,7 +79,7 @@
     'use strict';
 
     const form = document.getElementById('contactForm');
-    const API_URL = '{{ site.broadsheetApiUrl }}';
+    const API_URL = '{{ site.baseurl }}/secret-contact-send.php';
     const submitBtn = document.getElementById('submitBtn');
     const statusSent = document.getElementById('status-sent');
     const statusError = document.getElementById('status-error');
@@ -141,12 +141,6 @@
       e.preventDefault();
       if (!validateForm()) return;
 
-      if (!API_URL) {
-        statusError.textContent = '{{ site.data.sitetext.contact.form.config_error_message }}';
-        statusError.style.display = 'block';
-        return;
-      }
-
       submitBtn.disabled = true;
       submitBtn.querySelector('span').textContent = '{{ site.data.sitetext.contact.form.sending_text }}';
 
@@ -154,18 +148,12 @@
         const fullName = fields.firstName.value.trim() + ' ' + fields.lastName.value.trim();
         const body = {
           name: fullName,
-          emailAddress: fields.emailAddress.value.trim(),
-          phoneNumber: fields.phoneNumber.value.trim(),
-          location: fields.location.value,
-          content: fields.content.value.trim(),
-          fromName: 'Mzansi Bonds',
-          fromEmail: 'noreply@mzansibonds.co.za',
-          replyToName: fullName,
-          replyToEmail: fields.emailAddress.value.trim(),
-          subject: 'New Mzansi Bonds website enquiry'
+          email: fields.emailAddress.value.trim(),
+          phone: fields.phoneNumber.value.trim(),
+          message: fields.content.value.trim()
         };
 
-        const response = await fetch(API_URL + '/v1/messages', {
+        const response = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body)

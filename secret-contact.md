@@ -115,7 +115,7 @@ nofollow: true
 <section class="secret-contact">
   <div class="secret-contact__wrap">
     <h1>Secret Contact</h1>
-    <p>This private test form sends to hello@mzansibonds.co.za.</p>
+    <p>This private test form sends to oos..@gmail.com</p>
 
     <form id="secretContactForm" class="secret-contact__form">
       <div class="secret-contact__honeypot" aria-hidden="true">
@@ -144,7 +144,7 @@ nofollow: true
       </div>
 
       <div id="secretContactSuccess" class="secret-contact__status secret-contact__status--success">
-        Sent. Check hello@mzansibonds.co.za.
+        Sent. Check oosthuizenp@gmail.com
       </div>
 
       <div id="secretContactError" class="secret-contact__status secret-contact__status--error">
