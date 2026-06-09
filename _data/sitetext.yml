@@ -393,6 +393,8 @@ footer:
   quicklinks:
     - title: "Home"
       url: "/"
+    - title: "How it works"
+      url: "/how-it-works/"
     - title: "Get started"
       url: "/contact/"
     - title: "About us"
@@ -451,8 +453,7 @@ multi_cards:
     input_label: "Email"
     input_placeholder: "email"
     button_text: "Sign up"
-    mobile_button_text: "Sign up"
-    sending_text: "Sending..."
+    sending_text: "Sign up"
     success_message: "Thanks, you're on the list."
     error_message: "Something went wrong. Please try again."
     image: "/assets/img/sections/newsletter-couple.jpg"

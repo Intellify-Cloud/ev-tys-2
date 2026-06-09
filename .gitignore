@@ -3,7 +3,8 @@ node_modules
 .mcp.json
 .env
 .env.*
-_private/
+_private/resend.php
+/resend.php
 
 *.gem
 .bundle
@@ -12,3 +13,4 @@ _private/
 _site
 unused
 bootstrap-reference.html
+
